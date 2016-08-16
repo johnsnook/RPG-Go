@@ -1,12 +1,11 @@
 ﻿using System;
-
 namespace RPG_Go
 {
-
     namespace PlayersHandbook
     {
         using System.Collections;
 
+        // Confusing name, but this fella is the abstract for D&D class types, like Fighter, Cleric etc.
         public abstract class Class
         {
             private string name; // 'class name'

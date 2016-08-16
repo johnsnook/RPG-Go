@@ -61,10 +61,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class.cs" />
+    <Compile Include="PlayersHandbook\Class.cs" />
+    <Compile Include="PlayersHandbook\Dwarf.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Race.cs" />
+    <Compile Include="PlayersHandbook\Race.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
