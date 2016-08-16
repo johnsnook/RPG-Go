@@ -1,6 +1,6 @@
 ﻿// Title: Class class for RPG_Go
 // Author: John Snook
-// Created 2016-08-16 
+// Created 2016-08-16  
 
 using System;
 namespace RPG_Go.PlayersHandbook
