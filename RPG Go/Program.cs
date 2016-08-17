@@ -28,7 +28,7 @@ namespace RPG_Go
                     case "n":
                         D = Dwarf.Instance;
                         F = Fighter.Instance;
-                        C = new Character(D, F);
+                        C = new Character(D, F, 'M');
                         
 
                         cw(C.ToString());
