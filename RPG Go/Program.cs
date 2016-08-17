@@ -1,12 +1,15 @@
 ﻿using System;
 
-
 namespace RPG_Go
 {
 
     using RPG_Go.Player;
     using RPG_Go.DungeonMaster;
     using System.Collections;
+
+    /// <summary>
+    /// Main Program test loop
+    /// </summary>
     class Program
     {
 
