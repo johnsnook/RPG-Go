@@ -1,7 +1,10 @@
 ﻿using System;
-using RPG_Go.PlayersHandbook;
+
 namespace RPG_Go
 {
+
+    using RPG_Go.Player;
+    using RPG_Go.DungeonMaster;
     using System.Collections;
     class Program
     {
@@ -10,20 +13,33 @@ namespace RPG_Go
         {
             Action<string> cw = Console.WriteLine;
             bool done = false;
+            int[] list;
+            cw("Welcome to the RPG_Go testing suite.");
             while (!done)
             {
-                
-                cw("Butts");
+                Console.Write("RPG_Go: ");
                 string input = Console.ReadLine();
                 switch (input)
                 {
                     case "d":
-                        Dwarf D = new Dwarf();
+                        Dwarf D = Dwarf.Instance;
                         cw(D.Description);
                         break;
+
+                    case "r20":
+                        list = Dice.D20(3);
+                        cw("Rolling 3 d20: [" + list[0] + ',' + list[1] + ',' + list[2] + ']');
+                        break;
+
+                    case "r3d6":
+                        list = Dice.ThreeD6(3, -1);
+                        cw("Rolling 3 d20: [" + list[0] + ',' + list[1] + ',' + list[2] + ']');
+                        break;
+
                     case "q":
                         done = true;
                         break;
+
                     default:
                         cw("what?");
                         break;

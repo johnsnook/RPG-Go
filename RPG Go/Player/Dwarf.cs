@@ -1,11 +1,28 @@
 ﻿using System;
-namespace RPG_Go.PlayersHandbook
+namespace RPG_Go.Player
 {
     using System.Collections;
 
-
-    public class Dwarf : Race
+    // singleton
+    public sealed class Dwarf : CharacterRace
     {
+        private static readonly Lazy<Dwarf> lazy =
+        new Lazy<Dwarf>(() => new Dwarf());
+
+        public static Dwarf Instance { get { return lazy.Value; } }
+
+        //public override event EventHandler LevelUp;
+        //public override event EventHandler Attack;
+        //public override event EventHandler Attacked;
+        //public override event EventHandler SavingThrow;
+        //public override event EventHandler SkillCheck;
+        //public override event EventHandler DifficultyCheck;
+        //public override event EventHandler OnCreate;
+
+        public override void Create(Character character)
+        {
+            character.strength = 10;
+        }
 
         public override string Name
         {

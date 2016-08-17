@@ -61,11 +61,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PlayersHandbook\Class.cs" />
-    <Compile Include="PlayersHandbook\Dwarf.cs" />
+    <Compile Include="DungeonMaster\Dice.cs" />
+    <Compile Include="Effect.cs" />
+    <Compile Include="Player\CharacterClass.cs" />
+    <Compile Include="Player\Character.cs" />
+    <Compile Include="Player\Fighter.cs" />
+    <Compile Include="Player\Dwarf.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PlayersHandbook\Race.cs" />
+    <Compile Include="Player\CharacterRace.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
