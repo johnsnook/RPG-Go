@@ -6,10 +6,22 @@ using System.Threading.Tasks;
 
 namespace RPG_Go.Player
 {
+    /// <summary>
+    /// The Fighter Character Class
+    /// </summary>
     public class Fighter : CharacterClass
     {
+        // Lazily assign our instance to ourselves to keep it singletonish
+        private static readonly Lazy<Fighter> lazy = new Lazy<Fighter>(() => new Fighter());
+        public static Fighter Instance { get { return lazy.Value; } }
+
+        public Fighter()
+        {
+            abilityScoredPrecedence = new string[6] { "strength", "constitution", "dexterity", "wisdom", "intelligence", "charisma" };
+        }
         public override void Create(Character character)
         {
+            
             character.strength = 10;
         }
         public override string Name

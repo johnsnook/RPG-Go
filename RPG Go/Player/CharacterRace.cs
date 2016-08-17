@@ -8,7 +8,7 @@ namespace RPG_Go.Player
     public abstract class CharacterRace
     {
         //public abstract event EventHandler Create;
-        public abstract void Create(Character character);
+        public abstract void OnCreate(Object sender, EventArgs e);
         //public abstract event EventHandler LevelUp;
         //public abstract event EventHandler Attack;
         //public abstract event EventHandler Attacked;
@@ -33,11 +33,11 @@ namespace RPG_Go.Player
         public abstract string Size { get; }
         public abstract int Speed { get; }
         public abstract int StartingAge { get; }
-        public abstract ArrayList MaleNames { get; }
-        public abstract ArrayList FemaleNames { get; }
-        public abstract ArrayList Surnames { get; }
-        public abstract ArrayList Languages { get; }
-        public abstract ArrayList Proficiencies { get; }
+        public abstract string[] MaleNames { get; }
+        public abstract string[] FemaleNames { get; }
+        public abstract string[] Surnames { get; }
+        public abstract string[] Languages { get; }
+        public abstract string[] Proficiencies { get; }
 
         //public abstract void OnCreate(Object sender, System.EventArgs e);
     }

@@ -6,10 +6,10 @@ namespace RPG_Go.Player
     // singleton
     public sealed class Dwarf : CharacterRace
     {
-        private static readonly Lazy<Dwarf> lazy =
-        new Lazy<Dwarf>(() => new Dwarf());
-
+        // Lazily assign our instance to ourselves to keep it singletonish
+        private static readonly Lazy<Dwarf> lazy = new Lazy<Dwarf>(() => new Dwarf());
         public static Dwarf Instance { get { return lazy.Value; } }
+
 
         //public override event EventHandler LevelUp;
         //public override event EventHandler Attack;
@@ -19,9 +19,11 @@ namespace RPG_Go.Player
         //public override event EventHandler DifficultyCheck;
         //public override event EventHandler OnCreate;
 
-        public override void Create(Character character)
+        public override void OnCreate(object sender, EventArgs e)
         {
-            character.strength = 10;
+            /// Ability Score Increase: Your Constitution score increases by 2.
+            Character c = (Character)sender;
+            c.constitution += 2;
         }
 
         public override string Name
@@ -34,74 +36,55 @@ namespace RPG_Go.Player
         }
         public override string Size
         {
+            //Size: Dwarves stand between 4 and 5 feet tall and average about 150 pounds. Your size is Medium.
             get { return "Medium"; }
         }
         public override int Speed
         {
+            //Speed: Your base walking speed is 25 feet. Your speed is not reduced by wearing Heavy Armor.
             get { return 25; }
         }
         public override int StartingAge
         {
+            //Age: Dwarves mature at the same rate as humans, but they’re considered young until they reach the age of 50. On average, they live about 350 years.
             get { return 50; }
         }
-        public override ArrayList MaleNames
+        public override string[] MaleNames
         {
             get
             {
-                ArrayList list = new ArrayList();
-                list.Add("One");
-                list.Add("Two");
-                list.Add("Three");
-
-                return list;
+                return new string[30] { "Adrik", "Alberich", "Baern", "Barendd", "Brottor", "Bruenor", "Dain", "Darrak", "Delg", "Eberk", "Einkil", "Fargrim", "Flint", "Gardain",
+                    "Harbek", "Kildrak", "Morgran", "Orsik", "Oskar", "Rangrim", "Rurik", "Taklinn", "Thoradin", "Thorin", "Tordek", "Traubon", "Travok", "Ulfgar", "Veit", "Vondal"};
             }
         }
-        public override ArrayList FemaleNames
+        public override string[] FemaleNames
         {
             get
             {
-                ArrayList list = new ArrayList();
-                list.Add("One");
-                list.Add("Two");
-                list.Add("Three");
-
-                return list;
+                return new string[23] { "Amber", "Artin", "Audhild", "Bardryn", "Dagnal", "Diesa", "Eldeth", "Falkrunn", "Finellen", "Gunnloda", "Gurdis", "Helja", "Hlin", "Kathra",
+                    "Kristryd", "Ilde", "Liftrasa", "Mardred", "Riswynn", "Sannl", "Torbera", "Torgga", "Vistra" };
             }
         }
-        public override ArrayList Surnames
+        public override string[] Surnames
         {
             get
             {
-                ArrayList list = new ArrayList();
-                list.Add("One");
-                list.Add("Two");
-                list.Add("Three");
-
-                return list;
+                return new string[15] { "Balderk", "Battlehammer", "Brawnanvil", "Dankil", "Fireforge", "Frostbeard", "Gorunn", "Holderhek", "Ironfst", "Loderr", "Lutgehr", "Rumnaheim",
+                    "Strakeln", "Torunn", "Ungart" };
             }
         }
-        public override ArrayList Languages
+        public override string[] Languages
         {
             get
             {
-                ArrayList list = new ArrayList();
-                list.Add("One");
-                list.Add("Two");
-                list.Add("Three");
-
-                return list;
+                return new string[2] { "Common", "Dwarvish"};
             }
-        }
-        public override ArrayList Proficiencies
+        }   
+        public override string[] Proficiencies
         {
             get
             {
-                ArrayList list = new ArrayList();
-                list.Add("One");
-                list.Add("Two");
-                list.Add("Three");
-
-                return list;
+                return new string[3] { "Stonecunning", "Darkvision", "Dwarven Toughness" };
             }
         }
 

@@ -1,5 +1,6 @@
 ﻿using System;
 
+
 namespace RPG_Go
 {
 
@@ -14,6 +15,9 @@ namespace RPG_Go
             Action<string> cw = Console.WriteLine;
             bool done = false;
             int[] list;
+            Dwarf D;
+            Fighter F;
+            Character C;
             cw("Welcome to the RPG_Go testing suite.");
             while (!done)
             {
@@ -21,8 +25,17 @@ namespace RPG_Go
                 string input = Console.ReadLine();
                 switch (input)
                 {
+                    case "n":
+                        D = Dwarf.Instance;
+                        F = Fighter.Instance;
+                        C = new Character(D, F);
+                        
+
+                        cw(C.ToString());
+                        break;
+
                     case "d":
-                        Dwarf D = Dwarf.Instance;
+                        D = Dwarf.Instance;
                         cw(D.Description);
                         break;
 

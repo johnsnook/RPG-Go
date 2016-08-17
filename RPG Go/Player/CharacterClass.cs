@@ -14,6 +14,7 @@ namespace RPG_Go.Player
 
         private string name; // 'class name'
         private string description; // 'class description'
+        protected internal string[] abilityScoredPrecedence;
 
         // All Properties are read only
         public abstract string Name { get; }
