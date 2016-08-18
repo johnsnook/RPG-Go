@@ -65,21 +65,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DungeonMaster\AbilityScores.cs" />
     <Compile Include="DungeonMaster\Armor.cs" />
+    <Compile Include="DungeonMaster\Items.cs" />
     <Compile Include="DungeonMaster\Item.cs" />
     <Compile Include="DungeonMaster\Dice.cs" />
     <Compile Include="DungeonMaster\Effect.cs" />
     <Compile Include="Player\CharacterClass.cs" />
     <Compile Include="Player\Character.cs" />
-    <Compile Include="Player\Alignment.cs" />
+    <Compile Include="DungeonMaster\Alignment.cs" />
     <Compile Include="Player\Fighter.cs" />
     <Compile Include="Player\Dwarf.cs" />
+    <Compile Include="Player\Player.cs" />
+    <Compile Include="Player\Skills.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Player\CharacterRace.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -93,6 +98,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="json.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

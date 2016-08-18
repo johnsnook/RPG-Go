@@ -15,14 +15,14 @@ namespace RPG_Go.DungeonMaster
 
         public Types Type;
 
-        public Armor() { }
-        public Armor(string name, int weight, string description,  Types type)
+        public void PutOn(string Effect)
         {
-            Name = name;
-            Description = description;
-            Weight = weight;
-            Type = type;
+
+
         }
+
+        public void TakeOff() { }
+       
     }
 
     public class ChainMail:Armor

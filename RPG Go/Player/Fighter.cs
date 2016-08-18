@@ -15,7 +15,7 @@ namespace RPG_Go.Player
         public override void OnLevelUp(object sender, EventArgs e)
         {
             Character c = (Character)sender;
-            c.MaxHitPoints += Dice.D10() + c.Modifier("Constitution");
+            c.MaxHitPoints += Dice.D10() + c.AbilityScores.Modifier("Constitution");
 
         }
         // Event should get called by the Character after rolling stats
@@ -31,7 +31,7 @@ namespace RPG_Go.Player
 
         public Fighter()
         {
-            abilityScoredPrecedence = new string[6] { "strength", "constitution", "dexterity", "wisdom", "intelligence", "charisma" };
+            abilityScoredPrecedence = new string[6] { "Strength", "Constitution", "Dexterity", "Wisdom", "Intelligence", "Charisma" };
         }
 
         public override string Name

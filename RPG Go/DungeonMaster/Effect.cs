@@ -8,11 +8,11 @@ namespace RPG_Go.DungeonMaster
 {
     public abstract class Effect
     {
+        public Object Parent;
         public string Name;
         public string EventTrigger;
-        public Object Parent;
-        public bool isActive;
-
+        //public bool IsActive;
+        //public int Duration;
     }
 
     public class foo { } 

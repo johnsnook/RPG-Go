@@ -7,6 +7,7 @@ namespace RPG_Go
     using RPG_Go.DungeonMaster;
     using System.Collections;
     using Newtonsoft.Json;
+    using System.IO;
 
     /// <summary>
     /// Main Program test loop
@@ -39,7 +40,7 @@ namespace RPG_Go
                         cw(JsonConvert.SerializeObject(C, Formatting.Indented));
                         Console.ForegroundColor = ConsoleColor.Blue;
                         cw(C.Alignment.ToString());
-                        cw(C.Modifier("Strength").ToString());
+                        cw(C.AbilityScores.Modifier("Strength").ToString());
                         Console.ForegroundColor = ConsoleColor.White;
 
                         break;
@@ -47,6 +48,26 @@ namespace RPG_Go
                     case "d":
                         D = Dwarf.Instance;
                         cw(D.Description);
+                        break;
+
+                    case "nf":
+                        D = Dwarf.Instance;
+                        F = Fighter.Instance;
+                        C = new Character(D, F, Character.genders.MTF);
+                        JsonSerializer serializer = new JsonSerializer();
+                        //serializer.Converters.Add(new JavaScriptDateTimeConverter());
+                        serializer.NullValueHandling = NullValueHandling.Ignore;
+                        serializer.Formatting = Formatting.Indented;
+                        serializer.
+
+                        using (StreamWriter sw = new StreamWriter(@"C:\Users\John\Documents\Visual Studio 2015\characters.json", true))
+                        using(JsonWriter writer = new JsonTextWriter(sw))
+                        {
+                            serializer.Serialize(writer, C);
+                            // {"ExpiryDate":new Date(1230375600000),"Price":0}
+                            cw("c:\\json.txt: " + sw);
+                        }
+                        
                         break;
 
                     case "r20":

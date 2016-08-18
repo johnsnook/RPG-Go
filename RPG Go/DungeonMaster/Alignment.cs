@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace RPG_Go.Player
+namespace RPG_Go.DungeonMaster
 {
     public class Alignment
     {

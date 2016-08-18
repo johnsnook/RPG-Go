@@ -18,7 +18,7 @@ namespace RPG_Go.Player
 
             /// Ability Score Increase: Your Constitution score increases by 2.
             Character c = (Character)sender;
-            c.Constitution += 2;
+            c.AbilityScores.Constitution += 2;
 
             // alignment is sorta lawful good
             c.Alignment = new Alignment( Rando.Next(0,11), Rando.Next(0, 11));
@@ -26,8 +26,8 @@ namespace RPG_Go.Player
 
         public virtual void OnLevelUp(object sender, EventArgs e)
         {
-            Character c = (Character)sender;
-            c.MaxHitPoints += Dice.D10();
+            //Character c = (Character)sender;
+            //c.MaxHitPoints += Dice.D10();
 
         }
 

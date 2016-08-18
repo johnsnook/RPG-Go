@@ -2,13 +2,12 @@
 
 namespace RPG_Go.Player
 {
-    using RPG_Go.DungeonMaster;
+    using DungeonMaster;
     using System.Reflection;
 
     /// <summary>
     /// The Character Class relies on Race and Class to to build
     /// </summary>
-    [Serializable]
     public class Character
     {
         // look at this politically correct enum
@@ -22,9 +21,20 @@ namespace RPG_Go.Player
             AttackHelicopter
         }
 
+        /// <summary>
+        /// Events
+        /// </summary>
         public event EventHandler Create;
         public event EventHandler LevelUp;
+        //public event EventHandler Attack;
+        //public event EventHandler Attacked;
+        //public event EventHandler SavingThrow;
+        //public event EventHandler SkillCheck;
+        //public event EventHandler DifficultyCheck;
 
+        /// <summary>
+        /// Properties
+        /// </summary>
         public string Name { get; set; }
         public genders Gender = genders.None;
         public int XP { get; }
@@ -36,43 +46,21 @@ namespace RPG_Go.Player
         public int MaxHitPoints { get; protected internal set; }
         public int CurrentHitPoints { get; protected internal set; }
 
-        /// Ability scores
-        public int Strength { get; protected internal set; }
-        public int Dexterity { get; protected internal set; }
-        public int Constitution { get; protected internal set; }
-        public int Intelligence { get; protected internal set; }
-        public int Wisdom { get; protected internal set; }
-        public int Charisma { get; protected internal set; }
+        /// Ability scores & Sklls are encapsulated so they can be shared with other classes such as monsters
+        public AbilityScores AbilityScores = new AbilityScores();
+        public Skills Skills = new Skills();
 
-        /// Skills
-        public int Acrobatics { get; protected internal set; }
-        public int AnimalHandling { get; protected internal set; }
-        public int Arcana { get; protected internal set; }
-        public int Athletics { get; protected internal set; }
-        public int Deception { get; protected internal set; }
-        public int History { get; protected internal set; }
-        public int Insight { get; protected internal set; }
-        public int Intimidation { get; protected internal set; }
-        public int Investigation { get; protected internal set; }
-        public int Medicine { get; protected internal set; }
-        public int Nature { get; protected internal set; }
-        public int Perception { get; protected internal set; }
-        public int Performance { get; protected internal set; }
-        public int Persuasion { get; protected internal set; }
-        public int Religion { get; protected internal set; }
-        public int SleightOfHand { get; protected internal set; }
-        public int Stealth { get; protected internal set; }
-        public int Survival { get; protected internal set; }
-
-        //public override event EventHandler OnCreate;
-        //public override event EventHandler LevelUp;
-        //public override event EventHandler Attack;
-        //public override event EventHandler Attacked;
-        //public override event EventHandler SavingThrow;
-        //public override event EventHandler SkillCheck;
-        //public override event EventHandler DifficultyCheck;
-
-
+        /// <summary>
+        /// Constructor.
+        /// </summary>
+        /// <example>
+        /// D = Dwarf.Instance;
+        /// F = Fighter.Instance;
+        /// C = new Character(D, F, Character.genders.MTF);
+        /// </example>
+        /// <param name="newCharacterRace"></param>
+        /// <param name="newCharacterClass"></param>
+        /// <param name="newGender"></param>
         // This will roll a new character based on a race and class
         public Character(CharacterRace newCharacterRace, CharacterClass newCharacterClass, genders newGender = genders.Female)
         {
@@ -90,74 +78,41 @@ namespace RPG_Go.Player
             int[] list = Dice.ThreeD6(6, Dice.sort.descending);
             for (int i =0; i < 6; i++)
             {
-                switch (Class.abilityScoredPrecedence[i])
-                {
-                    case "strength":
-                        Strength = list[i];
-                        break;
-                    case "dexterity":
-                        Dexterity = list[i];
-                        break;
-                    case "constitution":
-                        Constitution = list[i];
-                        break;
-                    case "intelligence":
-                        Intelligence = list[i];
-                        break;
-                    case "wisdom":
-                        Wisdom = list[i];
-                        break;
-                    case "charisma":
-                        Charisma = list[i];
-                        break;
-
-                }
-
+                // generate a random name, player can change before save
                 Name = RandomName();
-
-                //this[Class.abilityScoredPrecedence[i]] = list[i];
+                // plug the best score possible into the best attribute 
+                AbilityScores[Class.abilityScoredPrecedence[i]] = list[i];
             }
             OnCreate(EventArgs.Empty);
             //Race.OnCreate(this, EventArgs.Empty);
         }
 
-        // Event code?
+        /// <summary>
+        /// Invoker for Create event
+        /// </summary>
+        /// <param name="e"></param>
         protected virtual void OnCreate(EventArgs e)
         {
             // Invokes the delegates. 
             Create?.Invoke(this, e);
         }
+
+        /// <summary>
+        /// Invoker for LevelUp event
+        /// </summary>
+        /// <param name="e"></param>
         protected virtual void OnLevelUp(EventArgs e)
         {
             // Invokes the delegates. 
             LevelUp?.Invoke(this, e);
         }
-        public int Modifier(string propertyName)
-        {
-            int i = (int)this[propertyName];
-            return (i - 10) / 2; ;
-        }
-        /// <summary>
-        /// This allows me to set the ability scores by arbitrary name
-        /// 
-        /// </summary>
-        /// <param name="propertyName"></param>
-        /// <returns></returns>
-        private object this[string propertyName]
-        {
-            get
-            {
-                PropertyInfo property = this.GetType().GetProperty(propertyName);
-                return property.GetValue(this, null);
-            }
-            set
-            {
-                PropertyInfo property = this.GetType().GetProperty(propertyName);
-                property.SetValue(this, value, null);
-            }
-        }
+        
 
-        public string RandomName()
+        /// <summary>
+        /// Generates a random name from the race names
+        /// </summary>
+        /// <returns>String Name</returns>
+        private string RandomName()
         {
             string[] First = new string[0];
             Random Rando = new Random();
