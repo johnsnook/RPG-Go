@@ -22,7 +22,7 @@ namespace RPG_Go.Player
         public override void Create(Character character)
         {
             
-            character.strength = 10;
+            character.Strength = 10;
         }
         public override string Name
         {

@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace RPG_Go.Player
 {
     using System.Collections;
@@ -14,9 +15,12 @@ namespace RPG_Go.Player
 
         public override void OnCreate(object sender, EventArgs e)
         {
+            Random Rando = new Random();
+
             /// Ability Score Increase: Your Constitution score increases by 2.
             Character c = (Character)sender;
             c.Constitution += 2;
+            c.Alignment = new Alignment( Rando.Next(0,11), Rando.Next(0, 11));
         }
 
         public override string Name

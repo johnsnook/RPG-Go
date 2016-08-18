@@ -9,10 +9,48 @@ namespace RPG_Go.Player
     using RPG_Go.DungeonMaster;
     using System.Reflection;
 
-    public struct alignment
+    public class Alignment
     {
-        int OrderAxis; // -10 to 10, negative is chaotic, positive is lawful
-        int MoralAxis; // -10 to 10, negative is evil, positive is good
+        public int OrderAxis // -10 to 10, negative is chaotic, positive is lawful
+        {
+            get { return OrderAxis; }
+            set {
+                if (value < -10)
+                {
+                    OrderAxis = -10;
+                }
+                else if (value > 10)
+                {
+                    OrderAxis = 10;
+                }
+                else
+                    OrderAxis = value;
+            }
+        }
+
+        public int MoralAxis // -10 to 10, negative is evil, positive is good
+        {
+            get { return MoralAxis; }
+            set
+            {
+                if (value < -10)
+                {
+                    MoralAxis = -10;
+                }
+                else if (value > 10)
+                {
+                    MoralAxis = 10;
+                }
+                else
+                    MoralAxis = value;
+            }
+        }
+
+        public Alignment(int orderAxis, int moralAxis)
+        {
+            OrderAxis = orderAxis;
+            MoralAxis = moralAxis;
+        }
     }
 
     /// <summary>
@@ -27,9 +65,11 @@ namespace RPG_Go.Player
         public char Gender = 'M';
         public int XP { get; }
         public int Level { get; }
-        public alignment Alignment { get; }
+        public Alignment Alignment { get; set; }
         public CharacterRace Race { get; }
         public CharacterClass Class { get; }
+
+        /// Ability scores
         public int Strength { get; protected internal set; }
         public int Dexterity { get; protected internal set; }
         public int Constitution { get; protected internal set; }
@@ -37,18 +77,39 @@ namespace RPG_Go.Player
         public int Wisdom { get; protected internal set; }
         public int Charisma { get; protected internal set; }
 
+        /// Skills
+        public int Acrobatics { get; protected internal set; }
+        public int AnimalHandling { get; protected internal set; }
+        public int Arcana { get; protected internal set; }
+        public int Athletics { get; protected internal set; }
+        public int Deception { get; protected internal set; }
+        public int History { get; protected internal set; }
+        public int Insight { get; protected internal set; }
+        public int Intimidation { get; protected internal set; }
+        public int Investigation { get; protected internal set; }
+        public int Medicine { get; protected internal set; }
+        public int Nature { get; protected internal set; }
+        public int Perception { get; protected internal set; }
+        public int Performance { get; protected internal set; }
+        public int Persuasion { get; protected internal set; }
+        public int Religion { get; protected internal set; }
+        public int SleightOfHand { get; protected internal set; }
+        public int Stealth { get; protected internal set; }
+        public int Survival { get; protected internal set; }
+
+        //public override event EventHandler OnCreate;
         //public override event EventHandler LevelUp;
         //public override event EventHandler Attack;
         //public override event EventHandler Attacked;
         //public override event EventHandler SavingThrow;
         //public override event EventHandler SkillCheck;
         //public override event EventHandler DifficultyCheck;
-        //public override event EventHandler OnCreate;
 
 
         // This will roll a new character based on a race and class
         public Character(CharacterRace newCharacterRace, CharacterClass newCharacterClass, char newGender = 'F')
         {
+            //Alignment = new Alignment();
             Gender = newGender;
             Race = newCharacterRace;
             Class = newCharacterClass;
@@ -116,20 +177,7 @@ namespace RPG_Go.Player
                 property.SetValue(this, value, null);
             }
         }
-        public override string ToString()
-        {
-            string s = "Name: " + Name + "\r\n"
-                + "Gender: " + Gender + "\r\n"
-                + "Race: " + Race.Name + "\r\n"
-                + "Class: " + Class.Name + "\r\n"
-                + "Strength: " + Strength + "\r\n"
-                + "Dexterity: " + Dexterity + "\r\n"
-                + "Constitution: " + Constitution + "\r\n"
-                + "Intelligence: " + Intelligence + "\r\n"
-                + "Wisdom: " + Wisdom + "\r\n"
-                + "Charisma: " + Charisma + "\r\n";
-            return base.ToString() + "\r\n" + s;
-        }
+
         public string RandomName()
         {
             Random Rando = new Random();

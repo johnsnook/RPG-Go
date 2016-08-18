@@ -6,6 +6,7 @@ namespace RPG_Go
     using RPG_Go.Player;
     using RPG_Go.DungeonMaster;
     using System.Collections;
+    using Newtonsoft.Json;
 
     /// <summary>
     /// Main Program test loop
@@ -33,8 +34,7 @@ namespace RPG_Go
                         F = Fighter.Instance;
                         C = new Character(D, F, 'M');
                         
-
-                        cw(C.ToString());
+                        cw(JsonConvert.SerializeObject(C, Formatting.Indented));
                         break;
 
                     case "d":
