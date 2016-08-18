@@ -10,7 +10,6 @@ namespace RPG_Go.Player
     // Confusing name, but this fella is the abstract for D&D class types, like Fighter, Cleric etc.
     public abstract class CharacterClass
     {
-        public abstract void Create(Character character);
 
         private string name; // 'class name'
         private string description; // 'class description'
@@ -19,6 +18,10 @@ namespace RPG_Go.Player
         // All Properties are read only
         public abstract string Name { get; }
         public abstract string Description { get; }
+
+        public abstract void OnCreate(Object sender, EventArgs e);
+        public abstract void OnLevelUp(Object sender, EventArgs e);
+
 
     }
 

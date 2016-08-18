@@ -1,57 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RPG_Go.Player
 {
     using RPG_Go.DungeonMaster;
     using System.Reflection;
-
-    public class Alignment
-    {
-        public int OrderAxis // -10 to 10, negative is chaotic, positive is lawful
-        {
-            get { return OrderAxis; }
-            set {
-                if (value < -10)
-                {
-                    OrderAxis = -10;
-                }
-                else if (value > 10)
-                {
-                    OrderAxis = 10;
-                }
-                else
-                    OrderAxis = value;
-            }
-        }
-
-        public int MoralAxis // -10 to 10, negative is evil, positive is good
-        {
-            get { return MoralAxis; }
-            set
-            {
-                if (value < -10)
-                {
-                    MoralAxis = -10;
-                }
-                else if (value > 10)
-                {
-                    MoralAxis = 10;
-                }
-                else
-                    MoralAxis = value;
-            }
-        }
-
-        public Alignment(int orderAxis, int moralAxis)
-        {
-            OrderAxis = orderAxis;
-            MoralAxis = moralAxis;
-        }
-    }
 
     /// <summary>
     /// The Character Class relies on Race and Class to to build
@@ -59,15 +11,30 @@ namespace RPG_Go.Player
     [Serializable]
     public class Character
     {
+        // look at this politically correct enum
+        public enum genders
+        {
+            None,
+            Male,
+            Female,
+            MTF,
+            FTM,
+            AttackHelicopter
+        }
+
         public event EventHandler Create;
+        public event EventHandler LevelUp;
 
         public string Name { get; set; }
-        public char Gender = 'M';
+        public genders Gender = genders.None;
         public int XP { get; }
         public int Level { get; }
         public Alignment Alignment { get; set; }
         public CharacterRace Race { get; }
         public CharacterClass Class { get; }
+
+        public int MaxHitPoints { get; protected internal set; }
+        public int CurrentHitPoints { get; protected internal set; }
 
         /// Ability scores
         public int Strength { get; protected internal set; }
@@ -107,15 +74,20 @@ namespace RPG_Go.Player
 
 
         // This will roll a new character based on a race and class
-        public Character(CharacterRace newCharacterRace, CharacterClass newCharacterClass, char newGender = 'F')
+        public Character(CharacterRace newCharacterRace, CharacterClass newCharacterClass, genders newGender = genders.Female)
         {
-            //Alignment = new Alignment();
+            // Alignment = new Alignment();
             Gender = newGender;
             Race = newCharacterRace;
             Class = newCharacterClass;
+
+            //// Attach event handler code
             this.Create += Race.OnCreate;
-            /// roll a list in decending order and map them to the most important abilities for that class            
-            int[] list = Dice.ThreeD6(6, -1);
+            this.LevelUp += Class.OnLevelUp;
+            this.Create += Class.OnCreate;
+
+            //// roll a list in decending order and map them to the most important abilities for that class            
+            int[] list = Dice.ThreeD6(6, Dice.sort.descending);
             for (int i =0; i < 6; i++)
             {
                 switch (Class.abilityScoredPrecedence[i])
@@ -145,19 +117,26 @@ namespace RPG_Go.Player
 
                 //this[Class.abilityScoredPrecedence[i]] = list[i];
             }
-
-            Race.OnCreate(this, EventArgs.Empty);
+            OnCreate(EventArgs.Empty);
+            //Race.OnCreate(this, EventArgs.Empty);
         }
 
+        // Event code?
         protected virtual void OnCreate(EventArgs e)
         {
-            if (Create != null)
-            {
-                // Invokes the delegates. 
-                Create(this, e);
-            }
+            // Invokes the delegates. 
+            Create?.Invoke(this, e);
         }
-
+        protected virtual void OnLevelUp(EventArgs e)
+        {
+            // Invokes the delegates. 
+            LevelUp?.Invoke(this, e);
+        }
+        public int Modifier(string propertyName)
+        {
+            int i = (int)this[propertyName];
+            return (i - 10) / 2; ;
+        }
         /// <summary>
         /// This allows me to set the ability scores by arbitrary name
         /// 
@@ -180,9 +159,26 @@ namespace RPG_Go.Player
 
         public string RandomName()
         {
+            string[] First = new string[0];
             Random Rando = new Random();
+            switch (Gender){
+                case genders.Male:
+                case genders.FTM:
+                    First = Race.MaleNames;
+                    break;
+                case genders.Female:
+                case genders.MTF:
+                    First = Race.FemaleNames;
+                    break;
+                case genders.None:
+                    First = new string[Race.MaleNames.Length + Race.FemaleNames.Length];
+                    Race.MaleNames.CopyTo(First, 0);
+                    Race.FemaleNames.CopyTo(First, Race.MaleNames.Length);
+                    
+                    break;
 
-            string[] First = Gender == 'M' ? Race.MaleNames : Race.FemaleNames;
+            }
+
             return First[Rando.Next(First.Length)] + ' ' + Race.Surnames[Rando.Next(Race.Surnames.Length)];
 
         }

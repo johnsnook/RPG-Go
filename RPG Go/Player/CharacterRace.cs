@@ -1,23 +1,10 @@
 ﻿using System;
 namespace RPG_Go.Player
 {
-    using System.Collections;
-
-
-    // The race is on!  this abstract defines the outline for the race class
+    /// this abstract defines the outline for the race base class
     public abstract class CharacterRace
     {
-        //public abstract event EventHandler Create;
-        public abstract void OnCreate(Object sender, EventArgs e);
-        //public abstract event EventHandler LevelUp;
-        //public abstract event EventHandler Attack;
-        //public abstract event EventHandler Attacked;
-        //public abstract event EventHandler SavingThrow;
-        //public abstract event EventHandler SkillCheck;
-        //public abstract event EventHandler DifficultyCheck;
-
-
-        // Properties
+        /// Properties
         public abstract string Name { get; }
         public abstract string Description { get; }
         public abstract string Size { get; }
@@ -29,7 +16,19 @@ namespace RPG_Go.Player
         public abstract string[] Languages { get; }
         public abstract string[] Proficiencies { get; }
 
-        //public abstract void OnCreate(Object sender, System.EventArgs e);
+        /// Methods
+        public abstract void OnCreate(Object sender, EventArgs e);
+
+        
+        
+        //public abstract event EventHandler Create;
+        //public abstract event EventHandler LevelUp;
+        //public abstract event EventHandler Attack;
+        //public abstract event EventHandler Attacked;
+        //public abstract event EventHandler SavingThrow;
+        //public abstract event EventHandler SkillCheck;
+        //public abstract event EventHandler DifficultyCheck;
+
     }
 
 }

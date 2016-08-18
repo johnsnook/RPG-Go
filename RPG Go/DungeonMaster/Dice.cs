@@ -2,15 +2,27 @@
 
 namespace RPG_Go.DungeonMaster
 {
+    
     public class RPGEventArgs : EventArgs
     {
         public string Descripttion;
-         
+        
     }
 
     public class Dice
     {
+        public enum sort
+        {
+            none,
+            descending,
+            ascending
+        }
         static Random Rando = new Random();
+
+        public static int D10()
+        {
+            return Rando.Next(1, 11); // creates a number between 1 and 20
+        }
 
         public static int D20()
         {
@@ -32,7 +44,7 @@ namespace RPG_Go.DungeonMaster
             return Rando.Next(1, 7) + Rando.Next(1, 7) + Rando.Next(1, 7);
         }
 
-        public static int[] ThreeD6(int count, int sort =0)
+        public static int[] ThreeD6(int count, sort sort = sort.none)
         {
             int[] rolls = new int[count];
             for (int i = 0; i < count; i++)

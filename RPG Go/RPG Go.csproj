@@ -65,10 +65,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DungeonMaster\Armor.cs" />
+    <Compile Include="DungeonMaster\Item.cs" />
     <Compile Include="DungeonMaster\Dice.cs" />
-    <Compile Include="Effect.cs" />
+    <Compile Include="DungeonMaster\Effect.cs" />
     <Compile Include="Player\CharacterClass.cs" />
     <Compile Include="Player\Character.cs" />
+    <Compile Include="Player\Alignment.cs" />
     <Compile Include="Player\Fighter.cs" />
     <Compile Include="Player\Dwarf.cs" />
     <Compile Include="Program.cs" />

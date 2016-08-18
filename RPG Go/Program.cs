@@ -22,6 +22,7 @@ namespace RPG_Go
             Dwarf D;
             Fighter F;
             Character C;
+            
             cw("Welcome to the RPG_Go testing suite.");
             while (!done)
             {
@@ -32,9 +33,15 @@ namespace RPG_Go
                     case "n":
                         D = Dwarf.Instance;
                         F = Fighter.Instance;
-                        C = new Character(D, F, 'M');
-                        
+                        C = new Character(D, F, Character.genders.MTF);
+
+                        Console.ForegroundColor = ConsoleColor.Red;
                         cw(JsonConvert.SerializeObject(C, Formatting.Indented));
+                        Console.ForegroundColor = ConsoleColor.Blue;
+                        cw(C.Alignment.ToString());
+                        cw(C.Modifier("Strength").ToString());
+                        Console.ForegroundColor = ConsoleColor.White;
+
                         break;
 
                     case "d":
@@ -48,7 +55,7 @@ namespace RPG_Go
                         break;
 
                     case "r3d6":
-                        list = Dice.ThreeD6(3, -1);
+                        list = Dice.ThreeD6(3, Dice.sort.descending);
                         cw("Rolling 3 d20: [" + list[0] + ',' + list[1] + ',' + list[2] + ']');
                         break;
 

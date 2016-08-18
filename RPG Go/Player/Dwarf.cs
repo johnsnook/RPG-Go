@@ -2,17 +2,16 @@
 
 namespace RPG_Go.Player
 {
-    using System.Collections;
+    using DungeonMaster;
 
     // singleton
-    public sealed class Dwarf : CharacterRace
+    public class Dwarf : CharacterRace
     {
         // Lazily assign our instance to ourselves to keep it singletonish
         private static readonly Lazy<Dwarf> lazy = new Lazy<Dwarf>(() => new Dwarf());
         public static Dwarf Instance { get { return lazy.Value; } }
 
-
-
+        // Event should get called by the Character after rolling stats
         public override void OnCreate(object sender, EventArgs e)
         {
             Random Rando = new Random();
@@ -20,7 +19,16 @@ namespace RPG_Go.Player
             /// Ability Score Increase: Your Constitution score increases by 2.
             Character c = (Character)sender;
             c.Constitution += 2;
+
+            // alignment is sorta lawful good
             c.Alignment = new Alignment( Rando.Next(0,11), Rando.Next(0, 11));
+        }
+
+        public virtual void OnLevelUp(object sender, EventArgs e)
+        {
+            Character c = (Character)sender;
+            c.MaxHitPoints += Dice.D10();
+
         }
 
         public override string Name
