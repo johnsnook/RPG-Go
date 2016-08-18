@@ -16,16 +16,6 @@ namespace RPG_Go.Player
         //public abstract event EventHandler SkillCheck;
         //public abstract event EventHandler DifficultyCheck;
 
-        private string name; // 'race name'
-        private string description; // 'race description'
-        private string size; // 'medium'
-        private int speed; // 30
-        private int startingAge; // 20
-        private ArrayList maleNames;
-        private ArrayList femaleNames;
-        private ArrayList surnames;
-        private ArrayList languages;
-        private ArrayList proficiencies;
 
         // Properties
         public abstract string Name { get; }

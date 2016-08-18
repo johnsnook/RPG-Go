@@ -11,19 +11,12 @@ namespace RPG_Go.Player
         public static Dwarf Instance { get { return lazy.Value; } }
 
 
-        //public override event EventHandler LevelUp;
-        //public override event EventHandler Attack;
-        //public override event EventHandler Attacked;
-        //public override event EventHandler SavingThrow;
-        //public override event EventHandler SkillCheck;
-        //public override event EventHandler DifficultyCheck;
-        //public override event EventHandler OnCreate;
 
         public override void OnCreate(object sender, EventArgs e)
         {
             /// Ability Score Increase: Your Constitution score increases by 2.
             Character c = (Character)sender;
-            c.constitution += 2;
+            c.Constitution += 2;
         }
 
         public override string Name
