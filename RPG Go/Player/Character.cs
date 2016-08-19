@@ -3,23 +3,23 @@
 namespace RPG_Go.Player
 {
     using DungeonMaster;
-    using System.Reflection;
-
+    
+    // look at this politically correct enum
+    public enum genders
+    {
+        None,
+        Male,
+        Female,
+        MTF,
+        FTM,
+        AttackHelicopter
+    }
     /// <summary>
     /// The Character Class relies on Race and Class to to build
     /// </summary>
     public class Character
     {
-        // look at this politically correct enum
-        public enum genders
-        {
-            None,
-            Male,
-            Female,
-            MTF,
-            FTM,
-            AttackHelicopter
-        }
+        
 
         /// <summary>
         /// Events
@@ -39,17 +39,47 @@ namespace RPG_Go.Player
         public genders Gender = genders.None;
         public int XP { get; }
         public int Level { get; }
-        public Alignment Alignment { get; set; }
-        public CharacterRace Race { get; }
-        public CharacterClass Class { get; }
+        //        [JsonIgnore]
+        private CharacterRace _race;
+        public CharacterRace Race {
+            get { return _race; }
+            set {
+                _race = value;
+                //// Attach event handler code
+                this.Create += _race.OnCreate;
+            }
+        }
+        //        [JsonIgnore]
+        private CharacterClass _class;
+        public CharacterClass Class
+        {
+            get { return _class; }
+            set
+            {
+                _class = value;
+                //// Attach event handler code
+                this.LevelUp += _class.OnLevelUp;
+                this.Create += _class.OnCreate;
+            }
+        }
 
         public int MaxHitPoints { get; protected internal set; }
         public int CurrentHitPoints { get; protected internal set; }
 
-        /// Ability scores & Sklls are encapsulated so they can be shared with other classes such as monsters
-        public AbilityScores AbilityScores = new AbilityScores();
-        public Skills Skills = new Skills();
+        public Alignment Alignment { get; set; }
 
+        /// Ability scores & Sklls are encapsulated so they can be shared with other classes such as monsters
+        public AbilityScores AbilityScores { get; set; }
+        public Skills Skills { get; set; }
+
+
+        /// <summary>
+        /// Default constructor
+        /// </summary>
+        public Character()
+        {
+                
+        }
         /// <summary>
         /// Constructor.
         /// </summary>
@@ -64,28 +94,27 @@ namespace RPG_Go.Player
         // This will roll a new character based on a race and class
         public Character(CharacterRace newCharacterRace, CharacterClass newCharacterClass, genders newGender = genders.Female)
         {
+            Console.WriteLine("non default Character constructor called");
             // Alignment = new Alignment();
             Gender = newGender;
             Race = newCharacterRace;
             Class = newCharacterClass;
-
-            //// Attach event handler code
-            this.Create += Race.OnCreate;
-            this.LevelUp += Class.OnLevelUp;
-            this.Create += Class.OnCreate;
-
+            AbilityScores = new AbilityScores();
+            Skills = new Skills();
             //// roll a list in decending order and map them to the most important abilities for that class            
             int[] list = Dice.ThreeD6(6, Dice.sort.descending);
+
             for (int i =0; i < 6; i++)
             {
-                // generate a random name, player can change before save
-                Name = RandomName();
                 // plug the best score possible into the best attribute 
                 AbilityScores[Class.abilityScoredPrecedence[i]] = list[i];
             }
+            // generate a random name, player can change before save
+            Name = RandomName();
+
             OnCreate(EventArgs.Empty);
-            //Race.OnCreate(this, EventArgs.Empty);
         }
+
 
         /// <summary>
         /// Invoker for Create event

@@ -7,12 +7,12 @@ namespace RPG_Go.DungeonMaster
     /// </summary>
     public class AbilityScores
     {
-        public int Strength { get; protected internal set; }
-        public int Dexterity { get; protected internal set; }
-        public int Constitution { get; protected internal set; }
-        public int Intelligence { get; protected internal set; }
-        public int Wisdom { get; protected internal set; }
-        public int Charisma { get; protected internal set; }
+        public int Strength { get;  set; }
+        public int Dexterity { get; set; }
+        public int Constitution { get; set; }
+        public int Intelligence { get; set; }
+        public int Wisdom { get; set; }
+        public int Charisma { get; set; }
 
         /// <summary>
         /// This allows me to set the ability scores by arbitrary name

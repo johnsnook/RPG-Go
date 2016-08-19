@@ -3,13 +3,13 @@ using System.IO;
 
 namespace RPG_Go.Player
 {
-    class Player
+    class User
     {
         public string Name { set; get; }
         public Character Slot1 { set; get; }
         public Character Slot2 { set; get; }
 
-        public Player()
+        public User()
         {
             Name = "John Snook";
         }

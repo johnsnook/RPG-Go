@@ -76,7 +76,7 @@
     <Compile Include="DungeonMaster\Alignment.cs" />
     <Compile Include="Player\Fighter.cs" />
     <Compile Include="Player\Dwarf.cs" />
-    <Compile Include="Player\Player.cs" />
+    <Compile Include="Player\User.cs" />
     <Compile Include="Player\Skills.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -85,6 +85,7 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="ClassDiagram1.cd" />
+    <None Include="dudes.json" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

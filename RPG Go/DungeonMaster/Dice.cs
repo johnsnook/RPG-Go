@@ -52,12 +52,15 @@ namespace RPG_Go.DungeonMaster
                 rolls[i] = ThreeD6();
             }
 
-            if (sort < 0)
+            switch (sort)
             {
-                Array.Sort<int>(rolls,
-                    new Comparison<int>(
-                            (i1, i2) => i2.CompareTo(i1)
-                    ));
+                case sort.descending:
+                    Array.Sort<int>(rolls,
+                        new Comparison<int>(
+                                (i1, i2) => i2.CompareTo(i1)
+                        ));
+                    break;
+
             }
 
 
