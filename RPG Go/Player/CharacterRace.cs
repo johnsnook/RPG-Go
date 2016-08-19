@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace RPG_Go.Player
 {
+    using DungeonMaster;
     /// this abstract defines the outline for the race base class
     public abstract class CharacterRace
     {
@@ -15,6 +18,12 @@ namespace RPG_Go.Player
         public abstract string[] Surnames { get; }
         public abstract string[] Languages { get; }
         public abstract string[] Proficiencies { get; }
+
+        /// <summary>
+        /// The list of traits this race has
+        /// </summary>
+        public abstract List<KeyValuePair<string, Effect>> Traits { get; set; }
+
 
         /// Methods
         public abstract void OnCreate(Object sender, EventArgs e);

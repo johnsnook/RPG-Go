@@ -1,19 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+//using Microsoft.CodeDom.Providers.DotNetCompilerPlatform;
 
 namespace RPG_Go.DungeonMaster
 {
-    public abstract class Effect
+    public class Effect
     {
-        public Object Parent;
-        public string Name;
-        public string EventTrigger;
+        //public Object Parent;
+        public string Name { get; protected internal set; }
+        public string Description { get; protected internal set; }
+        public string EventTrigger { get; protected internal set; }
+        //public delegate E;
+
+        //public abstract void OnEvent(object sender, EventArgs e);
         //public bool IsActive;
         //public int Duration;
     }
 
-    public class foo { } 
 }

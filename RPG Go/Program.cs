@@ -18,22 +18,68 @@ namespace RPG_Go
     class Program
     {
         static Action<string> cw = Console.WriteLine;
-        static string dudesPath = @"C:\Users\John\Documents\Visual Studio 2015\Projects\RPG Go\\RPG Go\dudes.json";
 
         static void Main(string[] args)
         {
-            bool done = false;
+            Console.WindowHeight = 50;
+            Console.WindowWidth = 160;
+            TestUnits t; 
+
+            while (true)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.Write("RPG_Go: ");
+                Console.ForegroundColor = ConsoleColor.White;
+                // get using input
+                string command = Console.ReadLine();
+                string[] words;
+
+                words = command.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries);
+
+                switch (words[0])
+                {
+                    case "help":
+                        cw("Commands: test");
+                        break;
+
+                    case "test":
+                        t = new TestUnits(words[1]);
+                        break;
+
+
+                    case "q":
+                        return;
+
+
+                    default:
+                        cw("what?");
+                        break;
+
+                }
+                
+
+            }
+        }
+
+    }
+
+
+    public class TestUnits
+    {
+        static Action<string> cw = Console.WriteLine;
+        const string dudesPath = @"C:\Users\John\Documents\Visual Studio 2015\Projects\RPG Go\\RPG Go\dudes.json";
+
+        public TestUnits(string test)
+        {
             int[] list;
             Dwarf D;
             Fighter F;
             Character C;
 
             cw("Welcome to the RPG_Go testing suite.");
-            while (!done)
+            while (true)
             {
-                Console.Write("RPG_Go: ");
-                string input = Console.ReadLine();
-                switch (input)
+                switch (test)
                 {
                     case "n":
                         D = Dwarf.Instance;
@@ -74,18 +120,24 @@ namespace RPG_Go
                         break;
 
                     case "q":
-                        done = true;
-                        break;
+                        return;
+
 
                     default:
                         cw("what?");
                         break;
 
                 }
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.Write("RPG_Go Testing: ");
+                Console.ForegroundColor = ConsoleColor.White;
+                // get using input
+                test = Console.ReadLine();
+
             }
 
-        }
 
+        }
         static void writeCharacters()
         {
             var dudes = new List<Character>();
@@ -103,7 +155,7 @@ namespace RPG_Go
             settings.TypeNameHandling = TypeNameHandling.Objects;
             settings.NullValueHandling = NullValueHandling.Ignore;
             settings.Formatting = Formatting.Indented;
-            
+
             File.WriteAllText(dudesPath, JsonConvert.SerializeObject(dudes, settings));
 
             Character dude = dudes[0];
@@ -130,12 +182,13 @@ namespace RPG_Go
             //cw(JsonConvert.SerializeObject(dude, Formatting.Indented));
             Console.ForegroundColor = ConsoleColor.Magenta;
             cw($"Name:               {dude.Name}");
-            cw($"Alignment:          {dude.Alignment}" );
+            cw($"Alignment:          {dude.Alignment}");
             cw($"Strength:           {dude.AbilityScores.Strength}");
             cw("Strength Mod:       " + dude.AbilityScores.Modifier("Strength").ToString());
-            cw($"Constitution:       {dude.AbilityScores.Strength}" );
+            cw($"Constitution:       {dude.AbilityScores.Strength}");
             cw($"Constitution Mod:   " + dude.AbilityScores.Modifier("Constitution").ToString());
             Console.ForegroundColor = ConsoleColor.White;
         }
+
     }
 }

@@ -4,6 +4,15 @@ namespace RPG_Go.Player
 {
     using DungeonMaster;
     
+
+    public abstract class Entity
+    {
+        public abstract string Name { get; set; }
+        public abstract genders Gender { get; set; }
+
+    }
+
+
     // look at this politically correct enum
     public enum genders
     {
@@ -15,17 +24,20 @@ namespace RPG_Go.Player
         AttackHelicopter
     }
     /// <summary>
-    /// The Character Class relies on Race and Class to to build
+    /// The Character Class relies on Race and Class to to build.  It gets serialized and stored as JSON in characaters.json
     /// </summary>
-    public class Character
+    public class Character : Entity
     {
-        
+
+        public override string Name { get; set; }
+        public override genders Gender { get; set; } = genders.None;
 
         /// <summary>
         /// Events
         /// </summary>
         public event EventHandler Create;
         public event EventHandler LevelUp;
+
         //public event EventHandler Attack;
         //public event EventHandler Attacked;
         //public event EventHandler SavingThrow;
@@ -35,8 +47,6 @@ namespace RPG_Go.Player
         /// <summary>
         /// Properties
         /// </summary>
-        public string Name { get; set; }
-        public genders Gender = genders.None;
         public int XP { get; }
         public int Level { get; }
         //        [JsonIgnore]
@@ -72,9 +82,11 @@ namespace RPG_Go.Player
         public AbilityScores AbilityScores { get; set; }
         public Skills Skills { get; set; }
 
+        public string[] Languages { get; protected internal set; }
+        public string[] Proficiencies { get; protected internal set; }
 
         /// <summary>
-        /// Default constructor
+        /// Default constructor left empty so serializtion ignores the main one
         /// </summary>
         public Character()
         {

@@ -3,13 +3,26 @@
 namespace RPG_Go.Player
 {
     using DungeonMaster;
+    using System.Collections.Generic;
 
-    // singleton
+    /// <summary>
+    /// Dwarf is race of characters.   
+    /// </summary>
     public class Dwarf : CharacterRace
     {
         // Lazily assign our instance to ourselves to keep it singletonish
         private static readonly Lazy<Dwarf> lazy = new Lazy<Dwarf>(() => new Dwarf());
+        /// <summary>
+        /// Returns a singleton instance of this class.  I'm not sure it needs to be a singleton anymore
+        /// </summary>
         public static Dwarf Instance { get { return lazy.Value; } }
+
+
+        /// <summary>
+        /// The list of traits this race has
+        /// </summary>
+        public override List<KeyValuePair<string, Effect>> Traits { get; set; } = new List<KeyValuePair<string, Effect>>();
+
 
         // Event should get called by the Character after rolling stats
         public override void OnCreate(object sender, EventArgs e)
