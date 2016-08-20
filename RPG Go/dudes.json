@@ -1,6 +1,13 @@
 [
   {
     "$type": "RPG_Go.Player.Character, RPG Go",
+    "ArmorClass": {
+      "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+      "Base": 0,
+      "Bonus": 0,
+      "Modifier": -5,
+      "Value": 0
+    },
     "XP": 0,
     "Level": 1,
     "RaceName": "Dwarf",
@@ -26,15 +33,196 @@
       "Stealth": 0,
       "Survival": 0
     },
-    "Name": "Gardain Gorunn",
+    "Name": "Kildrak Lutgehr",
     "Gender": 1,
-    "MaxHP": 3,
+    "MaxHP": 9,
     "CurrentHP": 0,
     "Alignment": {
       "$type": "RPG_Go.DungeonMaster.Alignment, RPG Go",
-      "OrderAxis": 4,
-      "MoralAxis": 5
+      "OrderAxis": 5,
+      "MoralAxis": 7
     },
+    "Inventory": [],
+    "AbilityScores": {
+      "$type": "RPG_Go.DungeonMaster.AbilityScores, RPG Go",
+      "Strength": {
+        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "Base": 12,
+        "Bonus": 0,
+        "Modifier": 1,
+        "Value": 12
+      },
+      "Dexterity": {
+        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "Base": 11,
+        "Bonus": 0,
+        "Modifier": 0,
+        "Value": 11
+      },
+      "Constitution": {
+        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "Base": 12,
+        "Bonus": 0,
+        "Modifier": 1,
+        "Value": 12
+      },
+      "Intelligence": {
+        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "Base": 9,
+        "Bonus": 0,
+        "Modifier": 0,
+        "Value": 9
+      },
+      "Wisdom": {
+        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "Base": 10,
+        "Bonus": 0,
+        "Modifier": 0,
+        "Value": 10
+      },
+      "Charisma": {
+        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "Base": 8,
+        "Bonus": 0,
+        "Modifier": -1,
+        "Value": 8
+      }
+    }
+  },
+  {
+    "$type": "RPG_Go.Player.Character, RPG Go",
+    "ArmorClass": {
+      "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+      "Base": 0,
+      "Bonus": 0,
+      "Modifier": -5,
+      "Value": 0
+    },
+    "XP": 0,
+    "Level": 1,
+    "RaceName": "Dwarf",
+    "ClassName": "Fighter",
+    "Skills": {
+      "$type": "RPG_Go.Player.Skills, RPG Go",
+      "Acrobatics": 0,
+      "AnimalHandling": 0,
+      "Arcana": 0,
+      "Athletics": 0,
+      "Deception": 0,
+      "History": 0,
+      "Insight": 0,
+      "Intimidation": 0,
+      "Investigation": 0,
+      "Medicine": 0,
+      "Nature": 0,
+      "Perception": 0,
+      "Performance": 0,
+      "Persuasion": 0,
+      "Religion": 0,
+      "SleightOfHand": 0,
+      "Stealth": 0,
+      "Survival": 0
+    },
+    "Name": "Helja Lutgehr",
+    "Gender": 2,
+    "MaxHP": 1,
+    "CurrentHP": 0,
+    "Alignment": {
+      "$type": "RPG_Go.DungeonMaster.Alignment, RPG Go",
+      "OrderAxis": 5,
+      "MoralAxis": 7
+    },
+    "Inventory": [],
+    "AbilityScores": {
+      "$type": "RPG_Go.DungeonMaster.AbilityScores, RPG Go",
+      "Strength": {
+        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "Base": 16,
+        "Bonus": 0,
+        "Modifier": 3,
+        "Value": 16
+      },
+      "Dexterity": {
+        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "Base": 13,
+        "Bonus": 0,
+        "Modifier": 1,
+        "Value": 13
+      },
+      "Constitution": {
+        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "Base": 13,
+        "Bonus": 0,
+        "Modifier": 1,
+        "Value": 13
+      },
+      "Intelligence": {
+        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "Base": 8,
+        "Bonus": 0,
+        "Modifier": -1,
+        "Value": 8
+      },
+      "Wisdom": {
+        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "Base": 11,
+        "Bonus": 0,
+        "Modifier": 0,
+        "Value": 11
+      },
+      "Charisma": {
+        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "Base": 7,
+        "Bonus": 0,
+        "Modifier": -1,
+        "Value": 7
+      }
+    }
+  },
+  {
+    "$type": "RPG_Go.Player.Character, RPG Go",
+    "ArmorClass": {
+      "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+      "Base": 0,
+      "Bonus": 0,
+      "Modifier": -5,
+      "Value": 0
+    },
+    "XP": 0,
+    "Level": 1,
+    "RaceName": "Dwarf",
+    "ClassName": "Fighter",
+    "Skills": {
+      "$type": "RPG_Go.Player.Skills, RPG Go",
+      "Acrobatics": 0,
+      "AnimalHandling": 0,
+      "Arcana": 0,
+      "Athletics": 0,
+      "Deception": 0,
+      "History": 0,
+      "Insight": 0,
+      "Intimidation": 0,
+      "Investigation": 0,
+      "Medicine": 0,
+      "Nature": 0,
+      "Perception": 0,
+      "Performance": 0,
+      "Persuasion": 0,
+      "Religion": 0,
+      "SleightOfHand": 0,
+      "Stealth": 0,
+      "Survival": 0
+    },
+    "Name": "Ulfgar Lutgehr",
+    "Gender": 0,
+    "MaxHP": 9,
+    "CurrentHP": 0,
+    "Alignment": {
+      "$type": "RPG_Go.DungeonMaster.Alignment, RPG Go",
+      "OrderAxis": 5,
+      "MoralAxis": 7
+    },
+    "Inventory": [],
     "AbilityScores": {
       "$type": "RPG_Go.DungeonMaster.AbilityScores, RPG Go",
       "Strength": {
@@ -46,289 +234,50 @@
       },
       "Dexterity": {
         "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
-        "Base": 11,
-        "Bonus": 0,
-        "Modifier": 0,
-        "Value": 11
-      },
-      "Constitution": {
-        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
-        "Base": 16,
-        "Bonus": 2,
-        "Modifier": 4,
-        "Value": 18
-      },
-      "Intelligence": {
-        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
-        "Base": 9,
-        "Bonus": 0,
-        "Modifier": 0,
-        "Value": 9
-      },
-      "Wisdom": {
-        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
-        "Base": 11,
-        "Bonus": 0,
-        "Modifier": 0,
-        "Value": 11
-      },
-      "Charisma": {
-        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
-        "Base": 8,
-        "Bonus": 0,
-        "Modifier": -1,
-        "Value": 8
-      }
-    }
-  },
-  {
-    "$type": "RPG_Go.Player.Character, RPG Go",
-    "XP": 0,
-    "Level": 1,
-    "RaceName": "Dwarf",
-    "ClassName": "Fighter",
-    "Skills": {
-      "$type": "RPG_Go.Player.Skills, RPG Go",
-      "Acrobatics": 0,
-      "AnimalHandling": 0,
-      "Arcana": 0,
-      "Athletics": 0,
-      "Deception": 0,
-      "History": 0,
-      "Insight": 0,
-      "Intimidation": 0,
-      "Investigation": 0,
-      "Medicine": 0,
-      "Nature": 0,
-      "Perception": 0,
-      "Performance": 0,
-      "Persuasion": 0,
-      "Religion": 0,
-      "SleightOfHand": 0,
-      "Stealth": 0,
-      "Survival": 0
-    },
-    "Name": "Gurdis Gorunn",
-    "Gender": 2,
-    "MaxHP": 6,
-    "CurrentHP": 0,
-    "Alignment": {
-      "$type": "RPG_Go.DungeonMaster.Alignment, RPG Go",
-      "OrderAxis": 4,
-      "MoralAxis": 5
-    },
-    "AbilityScores": {
-      "$type": "RPG_Go.DungeonMaster.AbilityScores, RPG Go",
-      "Strength": {
-        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
-        "Base": 16,
-        "Bonus": 0,
-        "Modifier": 3,
-        "Value": 16
-      },
-      "Dexterity": {
-        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
-        "Base": 10,
-        "Bonus": 0,
-        "Modifier": 0,
-        "Value": 10
-      },
-      "Constitution": {
-        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
-        "Base": 12,
-        "Bonus": 2,
-        "Modifier": 2,
-        "Value": 14
-      },
-      "Intelligence": {
-        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
-        "Base": 8,
-        "Bonus": 0,
-        "Modifier": -1,
-        "Value": 8
-      },
-      "Wisdom": {
-        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
-        "Base": 9,
-        "Bonus": 0,
-        "Modifier": 0,
-        "Value": 9
-      },
-      "Charisma": {
-        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
-        "Base": 8,
-        "Bonus": 0,
-        "Modifier": -1,
-        "Value": 8
-      }
-    }
-  },
-  {
-    "$type": "RPG_Go.Player.Character, RPG Go",
-    "XP": 0,
-    "Level": 1,
-    "RaceName": "Dwarf",
-    "ClassName": "Fighter",
-    "Skills": {
-      "$type": "RPG_Go.Player.Skills, RPG Go",
-      "Acrobatics": 0,
-      "AnimalHandling": 0,
-      "Arcana": 0,
-      "Athletics": 0,
-      "Deception": 0,
-      "History": 0,
-      "Insight": 0,
-      "Intimidation": 0,
-      "Investigation": 0,
-      "Medicine": 0,
-      "Nature": 0,
-      "Perception": 0,
-      "Performance": 0,
-      "Persuasion": 0,
-      "Religion": 0,
-      "SleightOfHand": 0,
-      "Stealth": 0,
-      "Survival": 0
-    },
-    "Name": "Thorin Gorunn",
-    "Gender": 0,
-    "MaxHP": 2,
-    "CurrentHP": 0,
-    "Alignment": {
-      "$type": "RPG_Go.DungeonMaster.Alignment, RPG Go",
-      "OrderAxis": 4,
-      "MoralAxis": 5
-    },
-    "AbilityScores": {
-      "$type": "RPG_Go.DungeonMaster.AbilityScores, RPG Go",
-      "Strength": {
-        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
-        "Base": 16,
-        "Bonus": 0,
-        "Modifier": 3,
-        "Value": 16
-      },
-      "Dexterity": {
-        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
-        "Base": 13,
-        "Bonus": 0,
-        "Modifier": 1,
-        "Value": 13
-      },
-      "Constitution": {
-        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
-        "Base": 13,
-        "Bonus": 2,
-        "Modifier": 2,
-        "Value": 15
-      },
-      "Intelligence": {
-        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
-        "Base": 11,
-        "Bonus": 0,
-        "Modifier": 0,
-        "Value": 11
-      },
-      "Wisdom": {
-        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
-        "Base": 12,
-        "Bonus": 0,
-        "Modifier": 1,
-        "Value": 12
-      },
-      "Charisma": {
-        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
-        "Base": 8,
-        "Bonus": 0,
-        "Modifier": -1,
-        "Value": 8
-      }
-    }
-  },
-  {
-    "$type": "RPG_Go.Player.Character, RPG Go",
-    "XP": 0,
-    "Level": 1,
-    "RaceName": "Dwarf",
-    "ClassName": "Fighter",
-    "Skills": {
-      "$type": "RPG_Go.Player.Skills, RPG Go",
-      "Acrobatics": 0,
-      "AnimalHandling": 0,
-      "Arcana": 0,
-      "Athletics": 0,
-      "Deception": 0,
-      "History": 0,
-      "Insight": 0,
-      "Intimidation": 0,
-      "Investigation": 0,
-      "Medicine": 0,
-      "Nature": 0,
-      "Perception": 0,
-      "Performance": 0,
-      "Persuasion": 0,
-      "Religion": 0,
-      "SleightOfHand": 0,
-      "Stealth": 0,
-      "Survival": 0
-    },
-    "Name": "Gardain Gorunn",
-    "Gender": 1,
-    "MaxHP": 4,
-    "CurrentHP": 0,
-    "Alignment": {
-      "$type": "RPG_Go.DungeonMaster.Alignment, RPG Go",
-      "OrderAxis": 4,
-      "MoralAxis": 5
-    },
-    "AbilityScores": {
-      "$type": "RPG_Go.DungeonMaster.AbilityScores, RPG Go",
-      "Strength": {
-        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
         "Base": 15,
         "Bonus": 0,
         "Modifier": 2,
         "Value": 15
       },
-      "Dexterity": {
+      "Constitution": {
+        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "Base": 16,
+        "Bonus": 0,
+        "Modifier": 3,
+        "Value": 16
+      },
+      "Intelligence": {
+        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "Base": 7,
+        "Bonus": 0,
+        "Modifier": -1,
+        "Value": 7
+      },
+      "Wisdom": {
         "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
         "Base": 13,
         "Bonus": 0,
         "Modifier": 1,
         "Value": 13
       },
-      "Constitution": {
-        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
-        "Base": 13,
-        "Bonus": 2,
-        "Modifier": 2,
-        "Value": 15
-      },
-      "Intelligence": {
-        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
-        "Base": 10,
-        "Bonus": 0,
-        "Modifier": 0,
-        "Value": 10
-      },
-      "Wisdom": {
-        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
-        "Base": 11,
-        "Bonus": 0,
-        "Modifier": 0,
-        "Value": 11
-      },
       "Charisma": {
         "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
-        "Base": 8,
+        "Base": 6,
         "Bonus": 0,
-        "Modifier": -1,
-        "Value": 8
+        "Modifier": -2,
+        "Value": 6
       }
     }
   },
   {
     "$type": "RPG_Go.Player.Character, RPG Go",
+    "ArmorClass": {
+      "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+      "Base": 0,
+      "Bonus": 0,
+      "Modifier": -5,
+      "Value": 0
+    },
     "XP": 0,
     "Level": 1,
     "RaceName": "Dwarf",
@@ -354,37 +303,38 @@
       "Stealth": 0,
       "Survival": 0
     },
-    "Name": "Gardain Gorunn",
+    "Name": "Kildrak Lutgehr",
     "Gender": 1,
-    "MaxHP": 9,
+    "MaxHP": 6,
     "CurrentHP": 0,
     "Alignment": {
       "$type": "RPG_Go.DungeonMaster.Alignment, RPG Go",
-      "OrderAxis": 4,
-      "MoralAxis": 5
+      "OrderAxis": 5,
+      "MoralAxis": 7
     },
+    "Inventory": [],
     "AbilityScores": {
       "$type": "RPG_Go.DungeonMaster.AbilityScores, RPG Go",
       "Strength": {
         "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
-        "Base": 12,
+        "Base": 16,
         "Bonus": 0,
-        "Modifier": 1,
-        "Value": 12
+        "Modifier": 3,
+        "Value": 16
       },
       "Dexterity": {
         "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
-        "Base": 11,
+        "Base": 10,
         "Bonus": 0,
         "Modifier": 0,
-        "Value": 11
+        "Value": 10
       },
       "Constitution": {
         "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
-        "Base": 11,
-        "Bonus": 2,
-        "Modifier": 1,
-        "Value": 13
+        "Base": 10,
+        "Bonus": 0,
+        "Modifier": 0,
+        "Value": 10
       },
       "Intelligence": {
         "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
@@ -395,17 +345,107 @@
       },
       "Wisdom": {
         "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
-        "Base": 10,
-        "Bonus": 0,
-        "Modifier": 0,
-        "Value": 10
-      },
-      "Charisma": {
-        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
         "Base": 9,
         "Bonus": 0,
         "Modifier": 0,
         "Value": 9
+      },
+      "Charisma": {
+        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "Base": 6,
+        "Bonus": 0,
+        "Modifier": -2,
+        "Value": 6
+      }
+    }
+  },
+  {
+    "$type": "RPG_Go.Player.Character, RPG Go",
+    "ArmorClass": {
+      "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+      "Base": 0,
+      "Bonus": 0,
+      "Modifier": -5,
+      "Value": 0
+    },
+    "XP": 0,
+    "Level": 1,
+    "RaceName": "Dwarf",
+    "ClassName": "Fighter",
+    "Skills": {
+      "$type": "RPG_Go.Player.Skills, RPG Go",
+      "Acrobatics": 0,
+      "AnimalHandling": 0,
+      "Arcana": 0,
+      "Athletics": 0,
+      "Deception": 0,
+      "History": 0,
+      "Insight": 0,
+      "Intimidation": 0,
+      "Investigation": 0,
+      "Medicine": 0,
+      "Nature": 0,
+      "Perception": 0,
+      "Performance": 0,
+      "Persuasion": 0,
+      "Religion": 0,
+      "SleightOfHand": 0,
+      "Stealth": 0,
+      "Survival": 0
+    },
+    "Name": "Kildrak Lutgehr",
+    "Gender": 1,
+    "MaxHP": 2,
+    "CurrentHP": 0,
+    "Alignment": {
+      "$type": "RPG_Go.DungeonMaster.Alignment, RPG Go",
+      "OrderAxis": 5,
+      "MoralAxis": 7
+    },
+    "Inventory": [],
+    "AbilityScores": {
+      "$type": "RPG_Go.DungeonMaster.AbilityScores, RPG Go",
+      "Strength": {
+        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "Base": 13,
+        "Bonus": 0,
+        "Modifier": 1,
+        "Value": 13
+      },
+      "Dexterity": {
+        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "Base": 12,
+        "Bonus": 0,
+        "Modifier": 1,
+        "Value": 12
+      },
+      "Constitution": {
+        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "Base": 13,
+        "Bonus": 0,
+        "Modifier": 1,
+        "Value": 13
+      },
+      "Intelligence": {
+        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "Base": 11,
+        "Bonus": 0,
+        "Modifier": 0,
+        "Value": 11
+      },
+      "Wisdom": {
+        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "Base": 11,
+        "Bonus": 0,
+        "Modifier": 0,
+        "Value": 11
+      },
+      "Charisma": {
+        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "Base": 7,
+        "Bonus": 0,
+        "Modifier": -1,
+        "Value": 7
       }
     }
   }

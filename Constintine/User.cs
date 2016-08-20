@@ -1,8 +1,10 @@
 ﻿using Newtonsoft.Json;
 using System.IO;
 
-namespace RPG_Go.Player
+namespace Constinetine
 {
+    using RPG_Go.Player;
+
     internal class User
     {
         public string Name { set; get; }

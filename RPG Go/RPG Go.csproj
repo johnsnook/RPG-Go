@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{3F62823C-B74C-4D66-BB9C-05ED44F32FF5}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>RPG_Go</RootNamespace>
     <AssemblyName>RPG Go</AssemblyName>
@@ -53,7 +53,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>RPG_Go.Program</StartupObject>
+    <StartupObject>
+    </StartupObject>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>d20.ico</ApplicationIcon>
@@ -91,7 +92,6 @@
     <Compile Include="DungeonMaster\Alignment.cs" />
     <Compile Include="Player\Fighter.cs" />
     <Compile Include="Player\Dwarf.cs" />
-    <Compile Include="Player\User.cs" />
     <Compile Include="Player\Skills.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
