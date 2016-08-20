@@ -21,24 +21,35 @@ namespace RPG_Go.Player
         /// <summary>
         /// The list of traits this race has
         /// </summary>
-        public override List<Effect> Traits { get; set; } = new List<Effect>();
+        public override List<Effect> Effects { get; set; } = new List<Effect>();
 
         /// Default constructor.  Attach yer Effects here to the traits bag
         public Dwarf()
         {
-            TokenizedEffect te = new TokenizedEffect("dwarven_toughness", string.Empty, "Create", "char con +2");
+            TokenizedEffect te = new TokenizedEffect("dwarven_toughness", string.Empty, "Create", "con + 2");
+            Effects.Add(te);
+        }
 
-            Traits.Add(te);
+        public override void ConnectEffects(Character character)
+        {
+            /// Ability Score Increase: Your Constitution score increases by 2.
+            foreach (Effect effect in Effects)
+            {
+                if (effect.GetType() == typeof(TokenizedEffect))
+                {
+                    TokenizedEffect t = (TokenizedEffect)effect;
+                    t.AttachEvent(character);
+                }
+            }
         }
 
         // Event should get called by the Character after rolling stats
         public override void OnCreate(object sender, EventArgs e)
         {
+            Character c = (Character)sender;
             Random Rando = new Random();
 
-            /// Ability Score Increase: Your Constitution score increases by 2.
-            Character c = (Character)sender;
-            c.AbilityScores.Constitution.Bonus += 2;
+            //c.AbilityScores.Constitution.Bonus += 2;
 
             // alignment is sorta lawful good
             c.Alignment = new Alignment(Rando.Next(0, 11), Rando.Next(0, 11));

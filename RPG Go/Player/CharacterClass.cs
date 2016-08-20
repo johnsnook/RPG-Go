@@ -1,17 +1,20 @@
-﻿// Title: Class class for RPG_Go
-// Author: John Snook
-// Created 2016-08-16
-
-using System;
-
-namespace RPG_Go.Player
+﻿namespace RPG_Go.Player
 {
+    using DungeonMaster;
+    using System;
+    using System.Collections.Generic;
+
     // Confusing name, but this fella is the abstract for D&D class types, like Fighter, Cleric etc.
     public abstract class CharacterClass
     {
-        private string name; // 'class name'
-        private string description; // 'class description'
         protected internal string[] abilityScoredPrecedence;
+
+        /// <summary>
+        /// The list of features this race has
+        /// </summary>
+        protected internal abstract List<Effect> Effects { get; set; }
+
+        public abstract void ConnectEffects(Character character);
 
         // All Properties are read only
         public abstract string Name { get; }

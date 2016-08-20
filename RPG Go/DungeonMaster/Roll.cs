@@ -54,13 +54,13 @@
 
     public class AttackRoll : Roll
     {
-        private Character Hero { get; set; }
-        private Monster Jerk { get; set; }
+        private Entity Attacker { get; set; }
+        private Entity Defender { get; set; }
 
-        public AttackRoll(Character hero, Monster jerk)
+        public AttackRoll(Entity attacker, Entity defender)
         {
-            Hero = hero;
-            Jerk = jerk;
+            Attacker = attacker;
+            Defender = defender;
         }
     }
 }

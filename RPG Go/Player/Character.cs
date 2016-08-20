@@ -9,9 +9,6 @@ namespace RPG_Go.Player
     /// </summary>
     public class Character : Entity
     {
-        //public override string Name { get; set; }
-        //public override genders Gender { get; set; } = genders.None;
-
         /// <summary>
         /// Create event gets called after a new character is "rolled", allowing subscribers to modify a new level 1 character
         /// </summary>
@@ -75,7 +72,8 @@ namespace RPG_Go.Player
         public string[] Proficiencies { get; protected internal set; }
 
         /// <summary>
-        /// Default constructor left empty so serializtion ignores the main one
+        /// Default constructor so serializtion ignores the main one
+        /// We'll need to reatach any effects here, treat it as "onLoad"
         /// </summary>
         public Character()
         {
@@ -87,18 +85,18 @@ namespace RPG_Go.Player
         /// <example>
         /// C = new Character("Dwarf", "Fighter", Character.genders.MTF);
         /// </example>
-        /// <param name="newCharacterRace"></param>
-        /// <param name="newCharacterClass"></param>
-        /// <param name="newGender"></param>
+        /// <param name="raceName"></param>
+        /// <param name="className"></param>
+        /// <param name="gender"></param>
         // This will roll a new character based on a race and class
-        public Character(string newCharacterRace, string newCharacterClass, genders newGender = genders.Female)
+        public Character(string raceName, string className, genders gender = genders.Female)
         {
             Console.WriteLine("non default Character constructor called");
             // Alignment = new Alignment();
-            Gender = newGender;
+            Gender = gender;
 
-            RaceName = newCharacterRace;
-            ClassName = newCharacterClass;
+            RaceName = raceName;
+            ClassName = className;
 
             AbilityScores = new AbilityScores();
             Skills = new Skills();
@@ -128,7 +126,6 @@ namespace RPG_Go.Player
             {
                 case "Dwarf":
                     return Dwarf.Instance;
-                    break;
 
                 default:
                     return null;
@@ -141,7 +138,6 @@ namespace RPG_Go.Player
             {
                 case "Fighter":
                     return Fighter.Instance;
-                    break;
 
                 default:
                     return null;

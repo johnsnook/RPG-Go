@@ -1,28 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram MajorVersion="1" MinorVersion="1">
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
   <Class Name="RPG_Go.DungeonMaster.BaseAndBonus" Collapsed="true">
-    <Position X="19" Y="0.5" Width="1.5" />
+    <Position X="18.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAgAAAAQAA=</HashCode>
       <FileName>DungeonMaster\AbilityScores.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG_Go.DungeonMaster.AbilityScores" Collapsed="true">
-    <Position X="15.5" Y="0.5" Width="1.5" />
+    <Position X="15" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAACAAAAAAAAACEAAAAAAABBAAAAAAAAACAAAACA=</HashCode>
       <FileName>DungeonMaster\AbilityScores.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG_Go.DungeonMaster.Alignment" Collapsed="true">
-    <Position X="17.25" Y="0.5" Width="1.5" />
+    <Position X="16.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ECAAABIAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
       <FileName>DungeonMaster\Alignment.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG_Go.DungeonMaster.Armor">
-    <Position X="5.25" Y="3" Width="1.5" />
+    <Position X="10.5" Y="9" Width="1.5" />
     <NestedTypes>
       <Enum Name="RPG_Go.DungeonMaster.Armor.ArmorTypes" Collapsed="true">
         <TypeIdentifier>
@@ -31,19 +31,19 @@
       </Enum>
     </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAQAAAAAAAQA=</HashCode>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAQA=</HashCode>
       <FileName>DungeonMaster\Armor.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG_Go.DungeonMaster.RPGEventArgs" Collapsed="true">
-    <Position X="19" Y="1.5" Width="1.5" />
+    <Position X="18.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>DungeonMaster\Dice.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG_Go.DungeonMaster.Dice" Collapsed="true">
-    <Position X="20.75" Y="0.5" Width="1.5" />
+    <Position X="20.25" Y="0.5" Width="1.5" />
     <NestedTypes>
       <Enum Name="RPG_Go.DungeonMaster.Dice.sort" Collapsed="true">
         <TypeIdentifier>
@@ -57,63 +57,73 @@
     </TypeIdentifier>
   </Class>
   <Class Name="RPG_Go.DungeonMaster.Effect">
-    <Position X="4.25" Y="5.5" Width="1.5" />
+    <Position X="3.25" Y="9.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAgAAAAAAAAAAQAAIAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>DungeonMaster\Effect.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG_Go.DungeonMaster.TokenizedEffect">
-    <Position X="3" Y="7.75" Width="1.5" />
+    <Position X="2" Y="11.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
       <FileName>DungeonMaster\Effect.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG_Go.DungeonMaster.DelegatedEffect">
-    <Position X="5.25" Y="7.75" Width="1.5" />
+    <Position X="4.25" Y="11.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>DungeonMaster\Effect.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG_Go.DungeonMaster.Entity">
-    <Position X="9.25" Y="0.5" Width="1.5" />
+    <Position X="3.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAACAAKAAEAQAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAABAAAAAACAAKAAEAQAAAAAAAABAAAAAgAAAAA=</HashCode>
       <FileName>DungeonMaster\Entity.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Gender" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="RPG_Go.DungeonMaster.Item">
-    <Position X="4.25" Y="0.5" Width="1.5" />
+    <Position X="9.25" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAgAAAAAAQAAAQAACAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>DungeonMaster\Item.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG_Go.DungeonMaster.Items" Collapsed="true">
-    <Position X="15.5" Y="1.5" Width="1.5" />
+    <Position X="15" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>DungeonMaster\Items.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG_Go.DungeonMaster.Roll">
-    <Position X="13" Y="0.5" Width="1.5" />
+    <Position X="8" Y="0.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AgAAAUAAAAAAAAAgAAAAQCAAAgAAAAEAAAAgAACAAAA=</HashCode>
       <FileName>DungeonMaster\Roll.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG_Go.DungeonMaster.AttackRoll">
-    <Position X="13" Y="4.75" Width="1.5" />
+    <Position X="8" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>DungeonMaster\Roll.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Attacker" />
+      <Property Name="Defender" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="RPG_Go.DungeonMaster.Weapon">
-    <Position X="3" Y="3" Width="1.5" />
+    <Position X="8" Y="9" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
     <NestedTypes>
       <Enum Name="RPG_Go.DungeonMaster.Weapon.Types" Collapsed="true">
         <TypeIdentifier>
@@ -122,110 +132,114 @@
       </Enum>
     </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAQAAAAAAAQA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAABAAQA=</HashCode>
       <FileName>DungeonMaster\Weapon.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG_Go.Monster.Monster">
-    <Position X="8" Y="3.25" Width="1.5" />
+    <Position X="2" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Monster\Monster.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG_Go.Player.Character">
-    <Position X="10.25" Y="3.25" Width="1.5" />
+    <Position X="4.25" Y="3.75" Width="2" />
     <TypeIdentifier>
       <HashCode>EAAAAAAECACAAAAAQAAAAAAJCCBAAEABABAAAAAEAAA=</HashCode>
       <FileName>Player\Character.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG_Go.Player.CharacterClass">
-    <Position X="8" Y="9.5" Width="1.5" />
+    <Position X="12" Y="0.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAgAAAAIAAAAAQIADAEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Player\CharacterClass.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG_Go.Player.CharacterRace">
-    <Position X="11" Y="9.5" Width="1.5" />
+    <Position X="11" Y="11.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAAAAAAACQAggAACgAAAAAQBACAAAAAAAAgAAAIAAAA=</HashCode>
       <FileName>Player\CharacterRace.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG_Go.Player.Dwarf">
-    <Position X="11" Y="13.75" Width="1.5" />
+    <Position X="11" Y="15.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAAAAAAACQAggAACgAAAAAQJACAAAAAAQAgAABIAAAA=</HashCode>
       <FileName>Player\Dwarf.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG_Go.Player.Fighter">
-    <Position X="8" Y="13" Width="1.5" />
+    <Position X="12.25" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAgAAAAAAAAAAQIACAAAAAAQAAAABAAAAA=</HashCode>
       <FileName>Player\Fighter.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG_Go.Player.Skills" Collapsed="true">
-    <Position X="20.75" Y="1.5" Width="1.5" />
+    <Position X="20.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>BAQAAgAACAIAABEACAEAAAARAAAEIBAAAAkDAAAACAA=</HashCode>
       <FileName>Player\Skills.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG_Go.Player.User" Collapsed="true">
-    <Position X="17.25" Y="2.5" Width="1.5" />
+    <Position X="16.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAIACAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>Player\User.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG_Go.Program" Collapsed="true">
-    <Position X="17.25" Y="1.5" Width="1.5" />
+    <Position X="16.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG_Go.TestUnits" Collapsed="true">
-    <Position X="15.5" Y="2.5" Width="1.5" />
+    <Position X="15" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABARAAAAAAAACAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Enum Name="RPG_Go.DungeonMaster.genders" Collapsed="true">
-    <Position X="20.75" Y="3.75" Width="1.5" />
+  <Enum Name="RPG_Go.DungeonMaster.genders">
+    <Position X="0.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>DAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEMAAAA=</HashCode>
       <FileName>DungeonMaster\Entity.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="RPG_Go.DungeonMaster.damageType" Collapsed="true">
-    <Position X="17.25" Y="3.75" Width="1.5" />
+    <Position X="16.75" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAQAIIAQAAAAAAAAAAAAAAAAAAAAAAABAAAAgAAAAA=</HashCode>
       <FileName>DungeonMaster\Entity.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="RPG_Go.DungeonMaster.bodyParts" Collapsed="true">
-    <Position X="15.5" Y="3.75" Width="1.5" />
+    <Position X="15" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAQAAEAAAAIAKAAAAAgAACEAAAAAEAAIAAQAAAAAAA=</HashCode>
       <FileName>DungeonMaster\Entity.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="RPG_Go.DungeonMaster.die" Collapsed="true">
-    <Position X="19" Y="3.75" Width="1.5" />
+    <Position X="18.5" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAQgACAAAAAA=</HashCode>
       <FileName>DungeonMaster\Roll.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="RPG_Go.DungeonMaster.rollMod" Collapsed="true">
-    <Position X="15.5" Y="4.5" Width="1.5" />
+    <Position X="20.25" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAQAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
       <FileName>DungeonMaster\Roll.cs</FileName>
