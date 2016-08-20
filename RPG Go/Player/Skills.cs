@@ -9,6 +9,7 @@ namespace RPG_Go.Player
     {
         /// Skills
         public int Acrobatics { get; protected internal set; }
+
         public int AnimalHandling { get; protected internal set; }
         public int Arcana { get; protected internal set; }
         public int Athletics { get; protected internal set; }
@@ -29,7 +30,7 @@ namespace RPG_Go.Player
 
         /// <summary>
         /// This allows me to set the ability scores by arbitrary name
-        /// 
+        ///
         /// </summary>
         /// <param name="propertyName"></param>
         /// <returns></returns>
@@ -46,6 +47,5 @@ namespace RPG_Go.Player
                 property.SetValue(this, value, null);
             }
         }
-
     }
 }

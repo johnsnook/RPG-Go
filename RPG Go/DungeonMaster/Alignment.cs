@@ -1,10 +1,9 @@
-﻿using System;
-
-namespace RPG_Go.DungeonMaster
+﻿namespace RPG_Go.DungeonMaster
 {
     public class Alignment
     {
         private int orderAxis;
+
         public int OrderAxis // -10 to 10, negative is chaotic, positive is lawful
         {
             get { return orderAxis; }
@@ -12,6 +11,7 @@ namespace RPG_Go.DungeonMaster
         }
 
         private int moralAxis;
+
         public int MoralAxis // -10 to 10, negative is evil, positive is good
         {
             get { return moralAxis; }
@@ -26,7 +26,7 @@ namespace RPG_Go.DungeonMaster
 
         public override string ToString()
         {
-            string s ="",t = "";
+            string s = "", t = "";
 
             if (orderAxis <= -8)
                 s = "Extremely Chaotic";
@@ -68,6 +68,7 @@ namespace RPG_Go.DungeonMaster
 
             return s + "/" + t;
         }
+
         private int clipper(int i)
         {
             if (i < -10)

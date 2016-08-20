@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace RPG_Go.DungeonMaster
+﻿namespace RPG_Go.DungeonMaster
 {
     public class Armor : Item
     {
@@ -17,21 +11,22 @@ namespace RPG_Go.DungeonMaster
 
         public void PutOn(string Effect)
         {
-
-
         }
 
-        public void TakeOff() { }
-       
+        public void TakeOff()
+        {
+        }
     }
 
-    public class ChainMail:Armor
+    public class ChainMail : Armor
     {
-        public ChainMail() {
+        public ChainMail()
+        {
             Name = "Chain Mail";
-
         }
-        private ChainMail(string name, int weight, string description, Types type) {}
 
+        private ChainMail(string name, int weight, string description, Types type)
+        {
+        }
     }
 }

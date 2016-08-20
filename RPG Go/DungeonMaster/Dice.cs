@@ -2,14 +2,12 @@
 
 namespace RPG_Go.DungeonMaster
 {
-    
     public class RPGEventArgs : EventArgs
     {
         public string Descripttion;
-        
     }
 
-    public class Dice
+    public static class Dice
     {
         public enum sort
         {
@@ -17,7 +15,18 @@ namespace RPG_Go.DungeonMaster
             descending,
             ascending
         }
-        static Random Rando = new Random();
+
+        private static Random Rando = new Random();
+
+        /// <summary>
+        /// Generic die rolling method
+        /// </summary>
+        /// <param name="sides">the max random number to return</param>
+        /// <returns>and integer between one and "sides"</returns>
+        public static int Roll(int sides)
+        {
+            return Rando.Next(1, sides + 1);
+        }
 
         public static int D10()
         {
@@ -32,15 +41,16 @@ namespace RPG_Go.DungeonMaster
         public static int[] D20(int count)
         {
             int[] rolls = new int[count];
-            for (int i =0; i < count; i++)
+            for (int i = 0; i < count; i++)
             {
                 rolls[i] = D20();
             }
-            return rolls; 
+            return rolls;
         }
 
         // generates a number between 3 and 18
-        public static int ThreeD6(){
+        public static int ThreeD6()
+        {
             return Rando.Next(1, 7) + Rando.Next(1, 7) + Rando.Next(1, 7);
         }
 
@@ -60,13 +70,9 @@ namespace RPG_Go.DungeonMaster
                                 (i1, i2) => i2.CompareTo(i1)
                         ));
                     break;
-
             }
 
-
-
-            return rolls; 
+            return rolls;
         }
-
     }
 }

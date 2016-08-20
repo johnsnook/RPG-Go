@@ -3,7 +3,7 @@ using System.IO;
 
 namespace RPG_Go.Player
 {
-    class User
+    internal class User
     {
         public string Name { set; get; }
         public Character Slot1 { set; get; }
@@ -20,7 +20,5 @@ namespace RPG_Go.Player
 
             return true;
         }
-
-        
     }
 }

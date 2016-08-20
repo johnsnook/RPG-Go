@@ -2,28 +2,24 @@
 
 namespace RPG_Go
 {
-
-    using System.Collections;
-    using Newtonsoft.Json;
-    using System.IO;
-
-    using Player;
     using DungeonMaster;
+    using Newtonsoft.Json;
+    using Player;
     using System.Collections.Generic;
-    using Newtonsoft.Json.Linq;
+    using System.IO;
 
     /// <summary>
     /// Main Program test loop
     /// </summary>
-    class Program
+    internal class Program
     {
-        static Action<string> cw = Console.WriteLine;
+        private static Action<string> cw = Console.WriteLine;
 
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             Console.WindowHeight = 50;
             Console.WindowWidth = 160;
-            TestUnits t; 
+            TestUnits t;
 
             while (true)
             {
@@ -46,28 +42,21 @@ namespace RPG_Go
                         t = new TestUnits(words[1]);
                         break;
 
-
                     case "q":
                         return;
-
 
                     default:
                         cw("what?");
                         break;
-
                 }
-                
-
             }
         }
-
     }
-
 
     public class TestUnits
     {
-        static Action<string> cw = Console.WriteLine;
-        const string dudesPath = @"C:\Users\John\Documents\Visual Studio 2015\Projects\RPG Go\\RPG Go\dudes.json";
+        private static Action<string> cw = Console.WriteLine;
+        private const string dudesPath = @"C:\Users\John\Documents\Visual Studio 2015\Projects\RPG Go\\RPG Go\dudes.json";
 
         public TestUnits(string test)
         {
@@ -84,7 +73,7 @@ namespace RPG_Go
                     case "n":
                         D = Dwarf.Instance;
                         F = Fighter.Instance;
-                        C = new Character(D, F, genders.Male);
+                        C = new Character("Dwarf", "Fighter", genders.Male);
 
                         Console.ForegroundColor = ConsoleColor.Red;
                         cw(JsonConvert.SerializeObject(C, Formatting.Indented));
@@ -92,7 +81,6 @@ namespace RPG_Go
                         cw(C.Alignment.ToString());
                         cw(C.AbilityScores.Modifier("Strength").ToString());
                         Console.ForegroundColor = ConsoleColor.White;
-
 
                         break;
 
@@ -122,33 +110,29 @@ namespace RPG_Go
                     case "q":
                         return;
 
-
                     default:
                         cw("what?");
                         break;
-
                 }
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.Write("RPG_Go Testing: ");
                 Console.ForegroundColor = ConsoleColor.White;
                 // get using input
                 test = Console.ReadLine();
-
             }
-
-
         }
-        static void writeCharacters()
+
+        private static void writeCharacters()
         {
             var dudes = new List<Character>();
             Dwarf D = Dwarf.Instance;
             Fighter F = Fighter.Instance;
-            Character C = new Character(D, F, genders.MTF);
-            dudes.Add(new Character(D, F, genders.Male));
-            dudes.Add(new Character(D, F, genders.Female));
-            dudes.Add(new Character(D, F, genders.None));
-            dudes.Add(new Character(D, F, genders.Male));
-            dudes.Add(new Character(D, F, genders.Male));
+            Character C = new Character("Dwarf", "Fighter", genders.MTF);
+            dudes.Add(new Character("Dwarf", "Fighter", genders.Male));
+            dudes.Add(new Character("Dwarf", "Fighter", genders.Female));
+            dudes.Add(new Character("Dwarf", "Fighter", genders.None));
+            dudes.Add(new Character("Dwarf", "Fighter", genders.Male));
+            dudes.Add(new Character("Dwarf", "Fighter", genders.Male));
 
             JsonSerializer serializer = new JsonSerializer();
             var settings = new JsonSerializerSettings();
@@ -162,19 +146,15 @@ namespace RPG_Go
             Console.ForegroundColor = ConsoleColor.Yellow;
             cw(JsonConvert.SerializeObject(dude, settings));
             Console.ForegroundColor = ConsoleColor.White;
-
         }
 
-        static void readCharacters()
+        private static void readCharacters()
         {
-
             //var dudes = new List<Character>();
             var settings = new JsonSerializerSettings();
             settings.TypeNameHandling = TypeNameHandling.Objects;
             settings.NullValueHandling = NullValueHandling.Ignore;
             settings.Formatting = Formatting.Indented;
-
-
 
             List<Character> dudes = JsonConvert.DeserializeObject<List<Character>>(File.ReadAllText(dudesPath), settings);
             Character dude = dudes[0];
@@ -189,6 +169,5 @@ namespace RPG_Go
             cw($"Constitution Mod:   " + dude.AbilityScores.Modifier("Constitution").ToString());
             Console.ForegroundColor = ConsoleColor.White;
         }
-
     }
 }

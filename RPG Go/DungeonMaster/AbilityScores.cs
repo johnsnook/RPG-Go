@@ -3,11 +3,11 @@
 namespace RPG_Go.DungeonMaster
 {
     /// <summary>
-    /// This class encapsulates the Ability Scores for characters, npcs AND monsters 
+    /// This class encapsulates the Ability Scores for characters, npcs AND monsters
     /// </summary>
     public class AbilityScores
     {
-        public int Strength { get;  set; }
+        public int Strength { get; set; }
         public int Dexterity { get; set; }
         public int Constitution { get; set; }
         public int Intelligence { get; set; }
@@ -16,7 +16,7 @@ namespace RPG_Go.DungeonMaster
 
         /// <summary>
         /// This allows me to set the ability scores by arbitrary name
-        /// 
+        ///
         /// </summary>
         /// <param name="propertyName"></param>
         /// <returns></returns>
@@ -39,6 +39,5 @@ namespace RPG_Go.DungeonMaster
             int i = (int)this[propertyName];
             return (i - 10) / 2; ;
         }
-
     }
 }
