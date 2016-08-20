@@ -56,7 +56,7 @@
     <StartupObject>RPG_Go.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>d3cac2ec56e311e7b1c724ce4fabc4c4.ico</ApplicationIcon>
+    <ApplicationIcon>d20.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -73,6 +73,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Delegate1.cs" />
     <Compile Include="DungeonMaster\AbilityScores.cs" />
     <Compile Include="DungeonMaster\Armor.cs" />
     <Compile Include="DungeonMaster\Entity.cs" />
@@ -96,6 +97,7 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
     <None Include="dudes.json" />
     <None Include="packages.config" />
   </ItemGroup>
@@ -112,7 +114,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="d3cac2ec56e311e7b1c724ce4fabc4c4.ico" />
+    <Content Include="d20.ico" />
     <Content Include="json.txt" />
   </ItemGroup>
   <ItemGroup />

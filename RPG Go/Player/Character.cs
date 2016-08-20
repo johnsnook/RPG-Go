@@ -108,7 +108,7 @@ namespace RPG_Go.Player
             for (int i = 0; i < 6; i++)
             {
                 // plug the best score possible into the best attribute
-                AbilityScores[GetClass().abilityScoredPrecedence[i]] = list[i];
+                AbilityScores[GetClass().abilityScoredPrecedence[i]] = new BaseAndBonus(list[i]);
             }
             // generate a random name, player can change before save
             Name = RandomName();

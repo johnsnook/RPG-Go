@@ -79,7 +79,7 @@ namespace RPG_Go
                         cw(JsonConvert.SerializeObject(C, Formatting.Indented));
                         Console.ForegroundColor = ConsoleColor.Blue;
                         cw(C.Alignment.ToString());
-                        cw(C.AbilityScores.Modifier("Strength").ToString());
+                        cw(C.AbilityScores.Strength.Modifier.ToString());
                         Console.ForegroundColor = ConsoleColor.White;
 
                         break;
@@ -163,10 +163,10 @@ namespace RPG_Go
             Console.ForegroundColor = ConsoleColor.Magenta;
             cw($"Name:               {dude.Name}");
             cw($"Alignment:          {dude.Alignment}");
-            cw($"Strength:           {dude.AbilityScores.Strength}");
-            cw("Strength Mod:       " + dude.AbilityScores.Modifier("Strength").ToString());
-            cw($"Constitution:       {dude.AbilityScores.Strength}");
-            cw($"Constitution Mod:   " + dude.AbilityScores.Modifier("Constitution").ToString());
+            cw($"Strength:           {dude.AbilityScores.Strength.Value}");
+            cw($"Strength Mod:       {dude.AbilityScores.Strength.Modifier}");
+            cw($"Constitution:       {dude.AbilityScores.Strength.Value}");
+            cw($"Constitution Mod:   " + dude.AbilityScores.Constitution.Modifier.ToString());
             Console.ForegroundColor = ConsoleColor.White;
         }
     }

@@ -1,28 +1,10 @@
 [
   {
     "$type": "RPG_Go.Player.Character, RPG Go",
-    "Name": "Traubon Balderk",
-    "Gender": 1,
     "XP": 0,
-    "Level": 0,
+    "Level": 1,
     "RaceName": "Dwarf",
     "ClassName": "Fighter",
-    "MaxHitPoints": 5,
-    "CurrentHitPoints": 0,
-    "Alignment": {
-      "$type": "RPG_Go.DungeonMaster.Alignment, RPG Go",
-      "OrderAxis": 9,
-      "MoralAxis": 0
-    },
-    "AbilityScores": {
-      "$type": "RPG_Go.DungeonMaster.AbilityScores, RPG Go",
-      "Strength": 13,
-      "Dexterity": 11,
-      "Constitution": 14,
-      "Intelligence": 8,
-      "Wisdom": 11,
-      "Charisma": 5
-    },
     "Skills": {
       "$type": "RPG_Go.Player.Skills, RPG Go",
       "Acrobatics": 0,
@@ -43,32 +25,150 @@
       "SleightOfHand": 0,
       "Stealth": 0,
       "Survival": 0
+    },
+    "Name": "Gardain Gorunn",
+    "Gender": 1,
+    "MaxHP": 3,
+    "CurrentHP": 0,
+    "Alignment": {
+      "$type": "RPG_Go.DungeonMaster.Alignment, RPG Go",
+      "OrderAxis": 4,
+      "MoralAxis": 5
+    },
+    "AbilityScores": {
+      "$type": "RPG_Go.DungeonMaster.AbilityScores, RPG Go",
+      "Strength": {
+        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "Base": 17,
+        "Bonus": 0,
+        "Modifier": 3,
+        "Value": 17
+      },
+      "Dexterity": {
+        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "Base": 11,
+        "Bonus": 0,
+        "Modifier": 0,
+        "Value": 11
+      },
+      "Constitution": {
+        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "Base": 16,
+        "Bonus": 2,
+        "Modifier": 4,
+        "Value": 18
+      },
+      "Intelligence": {
+        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "Base": 9,
+        "Bonus": 0,
+        "Modifier": 0,
+        "Value": 9
+      },
+      "Wisdom": {
+        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "Base": 11,
+        "Bonus": 0,
+        "Modifier": 0,
+        "Value": 11
+      },
+      "Charisma": {
+        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "Base": 8,
+        "Bonus": 0,
+        "Modifier": -1,
+        "Value": 8
+      }
     }
   },
   {
     "$type": "RPG_Go.Player.Character, RPG Go",
-    "Name": "Sannl Balderk",
+    "XP": 0,
+    "Level": 1,
+    "RaceName": "Dwarf",
+    "ClassName": "Fighter",
+    "Skills": {
+      "$type": "RPG_Go.Player.Skills, RPG Go",
+      "Acrobatics": 0,
+      "AnimalHandling": 0,
+      "Arcana": 0,
+      "Athletics": 0,
+      "Deception": 0,
+      "History": 0,
+      "Insight": 0,
+      "Intimidation": 0,
+      "Investigation": 0,
+      "Medicine": 0,
+      "Nature": 0,
+      "Perception": 0,
+      "Performance": 0,
+      "Persuasion": 0,
+      "Religion": 0,
+      "SleightOfHand": 0,
+      "Stealth": 0,
+      "Survival": 0
+    },
+    "Name": "Gurdis Gorunn",
     "Gender": 2,
-    "XP": 0,
-    "Level": 0,
-    "RaceName": "Dwarf",
-    "ClassName": "Fighter",
-    "MaxHitPoints": 2,
-    "CurrentHitPoints": 0,
+    "MaxHP": 6,
+    "CurrentHP": 0,
     "Alignment": {
       "$type": "RPG_Go.DungeonMaster.Alignment, RPG Go",
-      "OrderAxis": 9,
-      "MoralAxis": 0
+      "OrderAxis": 4,
+      "MoralAxis": 5
     },
     "AbilityScores": {
       "$type": "RPG_Go.DungeonMaster.AbilityScores, RPG Go",
-      "Strength": 12,
-      "Dexterity": 10,
-      "Constitution": 14,
-      "Intelligence": 8,
-      "Wisdom": 8,
-      "Charisma": 6
-    },
+      "Strength": {
+        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "Base": 16,
+        "Bonus": 0,
+        "Modifier": 3,
+        "Value": 16
+      },
+      "Dexterity": {
+        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "Base": 10,
+        "Bonus": 0,
+        "Modifier": 0,
+        "Value": 10
+      },
+      "Constitution": {
+        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "Base": 12,
+        "Bonus": 2,
+        "Modifier": 2,
+        "Value": 14
+      },
+      "Intelligence": {
+        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "Base": 8,
+        "Bonus": 0,
+        "Modifier": -1,
+        "Value": 8
+      },
+      "Wisdom": {
+        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "Base": 9,
+        "Bonus": 0,
+        "Modifier": 0,
+        "Value": 9
+      },
+      "Charisma": {
+        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "Base": 8,
+        "Bonus": 0,
+        "Modifier": -1,
+        "Value": 8
+      }
+    }
+  },
+  {
+    "$type": "RPG_Go.Player.Character, RPG Go",
+    "XP": 0,
+    "Level": 1,
+    "RaceName": "Dwarf",
+    "ClassName": "Fighter",
     "Skills": {
       "$type": "RPG_Go.Player.Skills, RPG Go",
       "Acrobatics": 0,
@@ -89,78 +189,68 @@
       "SleightOfHand": 0,
       "Stealth": 0,
       "Survival": 0
-    }
-  },
-  {
-    "$type": "RPG_Go.Player.Character, RPG Go",
-    "Name": "Ilde Balderk",
+    },
+    "Name": "Thorin Gorunn",
     "Gender": 0,
-    "XP": 0,
-    "Level": 0,
-    "RaceName": "Dwarf",
-    "ClassName": "Fighter",
-    "MaxHitPoints": 5,
-    "CurrentHitPoints": 0,
+    "MaxHP": 2,
+    "CurrentHP": 0,
     "Alignment": {
       "$type": "RPG_Go.DungeonMaster.Alignment, RPG Go",
-      "OrderAxis": 9,
-      "MoralAxis": 0
+      "OrderAxis": 4,
+      "MoralAxis": 5
     },
     "AbilityScores": {
       "$type": "RPG_Go.DungeonMaster.AbilityScores, RPG Go",
-      "Strength": 14,
-      "Dexterity": 13,
-      "Constitution": 15,
-      "Intelligence": 8,
-      "Wisdom": 9,
-      "Charisma": 5
-    },
-    "Skills": {
-      "$type": "RPG_Go.Player.Skills, RPG Go",
-      "Acrobatics": 0,
-      "AnimalHandling": 0,
-      "Arcana": 0,
-      "Athletics": 0,
-      "Deception": 0,
-      "History": 0,
-      "Insight": 0,
-      "Intimidation": 0,
-      "Investigation": 0,
-      "Medicine": 0,
-      "Nature": 0,
-      "Perception": 0,
-      "Performance": 0,
-      "Persuasion": 0,
-      "Religion": 0,
-      "SleightOfHand": 0,
-      "Stealth": 0,
-      "Survival": 0
+      "Strength": {
+        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "Base": 16,
+        "Bonus": 0,
+        "Modifier": 3,
+        "Value": 16
+      },
+      "Dexterity": {
+        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "Base": 13,
+        "Bonus": 0,
+        "Modifier": 1,
+        "Value": 13
+      },
+      "Constitution": {
+        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "Base": 13,
+        "Bonus": 2,
+        "Modifier": 2,
+        "Value": 15
+      },
+      "Intelligence": {
+        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "Base": 11,
+        "Bonus": 0,
+        "Modifier": 0,
+        "Value": 11
+      },
+      "Wisdom": {
+        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "Base": 12,
+        "Bonus": 0,
+        "Modifier": 1,
+        "Value": 12
+      },
+      "Charisma": {
+        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "Base": 8,
+        "Bonus": 0,
+        "Modifier": -1,
+        "Value": 8
+      }
     }
   },
   {
     "$type": "RPG_Go.Player.Character, RPG Go",
-    "Name": "Traubon Balderk",
-    "Gender": 1,
     "XP": 0,
-    "Level": 0,
+    "Level": 1,
     "RaceName": "Dwarf",
     "ClassName": "Fighter",
-    "MaxHitPoints": 4,
-    "CurrentHitPoints": 0,
-    "Alignment": {
-      "$type": "RPG_Go.DungeonMaster.Alignment, RPG Go",
-      "OrderAxis": 9,
-      "MoralAxis": 0
-    },
-    "AbilityScores": {
-      "$type": "RPG_Go.DungeonMaster.AbilityScores, RPG Go",
-      "Strength": 17,
-      "Dexterity": 12,
-      "Constitution": 15,
-      "Intelligence": 10,
-      "Wisdom": 12,
-      "Charisma": 9
-    },
     "Skills": {
       "$type": "RPG_Go.Player.Skills, RPG Go",
       "Acrobatics": 0,
@@ -181,32 +271,68 @@
       "SleightOfHand": 0,
       "Stealth": 0,
       "Survival": 0
+    },
+    "Name": "Gardain Gorunn",
+    "Gender": 1,
+    "MaxHP": 4,
+    "CurrentHP": 0,
+    "Alignment": {
+      "$type": "RPG_Go.DungeonMaster.Alignment, RPG Go",
+      "OrderAxis": 4,
+      "MoralAxis": 5
+    },
+    "AbilityScores": {
+      "$type": "RPG_Go.DungeonMaster.AbilityScores, RPG Go",
+      "Strength": {
+        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "Base": 15,
+        "Bonus": 0,
+        "Modifier": 2,
+        "Value": 15
+      },
+      "Dexterity": {
+        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "Base": 13,
+        "Bonus": 0,
+        "Modifier": 1,
+        "Value": 13
+      },
+      "Constitution": {
+        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "Base": 13,
+        "Bonus": 2,
+        "Modifier": 2,
+        "Value": 15
+      },
+      "Intelligence": {
+        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "Base": 10,
+        "Bonus": 0,
+        "Modifier": 0,
+        "Value": 10
+      },
+      "Wisdom": {
+        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "Base": 11,
+        "Bonus": 0,
+        "Modifier": 0,
+        "Value": 11
+      },
+      "Charisma": {
+        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "Base": 8,
+        "Bonus": 0,
+        "Modifier": -1,
+        "Value": 8
+      }
     }
   },
   {
     "$type": "RPG_Go.Player.Character, RPG Go",
-    "Name": "Traubon Balderk",
-    "Gender": 1,
     "XP": 0,
-    "Level": 0,
+    "Level": 1,
     "RaceName": "Dwarf",
     "ClassName": "Fighter",
-    "MaxHitPoints": 7,
-    "CurrentHitPoints": 0,
-    "Alignment": {
-      "$type": "RPG_Go.DungeonMaster.Alignment, RPG Go",
-      "OrderAxis": 9,
-      "MoralAxis": 0
-    },
-    "AbilityScores": {
-      "$type": "RPG_Go.DungeonMaster.AbilityScores, RPG Go",
-      "Strength": 16,
-      "Dexterity": 14,
-      "Constitution": 16,
-      "Intelligence": 12,
-      "Wisdom": 13,
-      "Charisma": 10
-    },
     "Skills": {
       "$type": "RPG_Go.Player.Skills, RPG Go",
       "Acrobatics": 0,
@@ -227,6 +353,60 @@
       "SleightOfHand": 0,
       "Stealth": 0,
       "Survival": 0
+    },
+    "Name": "Gardain Gorunn",
+    "Gender": 1,
+    "MaxHP": 9,
+    "CurrentHP": 0,
+    "Alignment": {
+      "$type": "RPG_Go.DungeonMaster.Alignment, RPG Go",
+      "OrderAxis": 4,
+      "MoralAxis": 5
+    },
+    "AbilityScores": {
+      "$type": "RPG_Go.DungeonMaster.AbilityScores, RPG Go",
+      "Strength": {
+        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "Base": 12,
+        "Bonus": 0,
+        "Modifier": 1,
+        "Value": 12
+      },
+      "Dexterity": {
+        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "Base": 11,
+        "Bonus": 0,
+        "Modifier": 0,
+        "Value": 11
+      },
+      "Constitution": {
+        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "Base": 11,
+        "Bonus": 2,
+        "Modifier": 1,
+        "Value": 13
+      },
+      "Intelligence": {
+        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "Base": 9,
+        "Bonus": 0,
+        "Modifier": 0,
+        "Value": 9
+      },
+      "Wisdom": {
+        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "Base": 10,
+        "Bonus": 0,
+        "Modifier": 0,
+        "Value": 10
+      },
+      "Charisma": {
+        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "Base": 9,
+        "Bonus": 0,
+        "Modifier": 0,
+        "Value": 9
+      }
     }
   }
 ]

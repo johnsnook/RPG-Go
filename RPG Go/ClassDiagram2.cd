@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="RPG_Go.DungeonMaster.BaseAndBonus">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAgAAAAQAA=</HashCode>
+      <FileName>DungeonMaster\AbilityScores.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_Go.DungeonMaster.AbilityScores" Collapsed="true">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAACEAAAAAAABBAAAAAAAAACAAAACA=</HashCode>
+      <FileName>DungeonMaster\AbilityScores.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_Go.DungeonMaster.Alignment" Collapsed="true">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ECAAABIAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>DungeonMaster\Alignment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_Go.DungeonMaster.Armor" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQABAAAAAAA=</HashCode>
+      <FileName>DungeonMaster\Armor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_Go.DungeonMaster.ChainMail" Collapsed="true">
+    <Position X="0.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DungeonMaster\Armor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_Go.DungeonMaster.RPGEventArgs" Collapsed="true">
+    <Position X="6" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DungeonMaster\Dice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_Go.DungeonMaster.Dice" Collapsed="true">
+    <Position X="6" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAACAAAAAQAAAABAAIAAAAAAAAAAA=</HashCode>
+      <FileName>DungeonMaster\Dice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_Go.DungeonMaster.Effect" Collapsed="true">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAQAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DungeonMaster\Effect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_Go.DungeonMaster.TokenizedEffect" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>DungeonMaster\Effect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_Go.DungeonMaster.DelegatedEffect" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DungeonMaster\Effect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_Go.DungeonMaster.Entity" Collapsed="true">
+    <Position X="7.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAKAAEAQAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>DungeonMaster\Entity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_Go.DungeonMaster.Item" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAQAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DungeonMaster\Item.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_Go.DungeonMaster.Items" Collapsed="true">
+    <Position X="9.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DungeonMaster\Items.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_Go.DungeonMaster.Roll" Collapsed="true">
+    <Position X="3.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAUAAAAAAAAAgAAAAQCAAAgAAAAEAAAAgAACAAAA=</HashCode>
+      <FileName>DungeonMaster\Roll.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_Go.DungeonMaster.AttackRoll" Collapsed="true">
+    <Position X="3.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DungeonMaster\Roll.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="RPG_Go.DungeonMaster.genders">
+    <Position X="7.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEMAAAA=</HashCode>
+      <FileName>DungeonMaster\Entity.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="RPG_Go.DungeonMaster.die">
+    <Position X="6" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAQgACAAAAAA=</HashCode>
+      <FileName>DungeonMaster\Roll.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="RPG_Go.DungeonMaster.rollMod">
+    <Position X="9.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>DungeonMaster\Roll.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -17,7 +17,7 @@ namespace RPG_Go.Player
         public override void OnLevelUp(object sender, EventArgs e)
         {
             Character c = (Character)sender;
-            c.MaxHP += Dice.D10() + c.AbilityScores.Modifier("Constitution");
+            c.MaxHP += Dice.D10() + c.AbilityScores.Constitution.Modifier;
         }
 
         // Event should get called by the Character after rolling stats

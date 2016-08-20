@@ -24,7 +24,9 @@ namespace RPG_Go.Player
         /// <summary>
         /// The list of traits this race has
         /// </summary>
-        public abstract List<KeyValuePair<string, Effect>> Traits { get; set; }
+        public abstract List<Effect> Traits { get; set; }
+
+        //public abstract List<KeyValuePair<string, Effect>> Traits { get; set; }
 
         /// Methods
         public abstract void OnCreate(Object sender, EventArgs e);
