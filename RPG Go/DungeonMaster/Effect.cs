@@ -52,12 +52,31 @@ namespace RPG_Go.DungeonMaster
             }
         }
 
+        public enum Subject
+        {
+            attack,
+            attacked,
+            save,
+            skill_check
+        }
+
+        public enum verb
+        {
+            roll,
+            damage,
+            attribute,
+            skill,
+            AC
+        }
+
         //  A
         public void OnApply(object Sender, EventArgs e)
         {
             // parse it
             switch (_actionTokens[0])
             {
+                case "attack":
+                    break;
             }
         }
     }

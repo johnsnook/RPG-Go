@@ -24,7 +24,7 @@ namespace RPG_Go.Player
         /// <summary>
         /// The list of traits this race has
         /// </summary>
-        public abstract List<Effect> Effects { get; set; }
+        public abstract List<Effect> Effects { get; }
 
         public abstract void ConnectEffects(Character character);
 
