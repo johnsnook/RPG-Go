@@ -46,10 +46,18 @@
         public event EventHandler RolledATwenty;
 
         /// Invokes the delegates.
-        protected virtual void OnRolledAOne(EventArgs e) { RolledAOne?.Invoke(this, e); }
+        protected virtual void OnRolledAOne(EventArgs e)
+        {
+            if (RolledAOne != null)
+                RolledAOne.Invoke(this, e);
+        }
 
         /// Invokes the delegates.
-        protected virtual void OnRolledATwenty(EventArgs e) { RolledATwenty?.Invoke(this, e); }
+        protected virtual void OnRolledATwenty(EventArgs e)
+        {
+            if (RolledATwenty != null)
+                RolledATwenty.Invoke(this, e);
+        }
     }
 
     public class AttackRoll : Roll

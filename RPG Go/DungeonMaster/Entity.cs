@@ -32,7 +32,9 @@ namespace RPG_Go.DungeonMaster
         /// <summary>
         /// The list loot this entity has
         /// </summary>
-        public List<Item> Inventory { get; set; } = new List<Item>();
+        public List<Item> Inventory { get { return _inventory; } }
+
+        private List<Item> _inventory = new List<Item>();
 
         /// Ability scores & Sklls are encapsulated so they can be shared with other classes such as monsters
         public AbilityScores AbilityScores { get; set; }

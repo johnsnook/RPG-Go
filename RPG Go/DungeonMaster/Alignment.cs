@@ -66,7 +66,7 @@
             else if (moralAxis >= 1)
                 t = "Kinda Good";
 
-            return s + "/" + t;
+            return s + " / " + t;
         }
 
         private int clipper(int i)
