@@ -12,6 +12,8 @@
         /// <summary>
         /// The list of traits this item has
         /// </summary>
-        public List<Effect> Effects { get; set; } = new List<Effect>();
+        public List<Effect> Effects { get { return _effects; } }
+
+        private List<Effect> _effects = new List<Effect>();
     }
 }

@@ -12,15 +12,17 @@ namespace RPG_Go
         public override string Name { get { return "Fighter"; } }
 
         // Lazily assign our instance to ourselves to keep it singletonish
-        private static readonly Lazy<Fighter> lazy = new Lazy<Fighter>(() => new Fighter());
+        //private static readonly Lazy<Fighter> lazy = new Lazy<Fighter>(() => new Fighter());
 
         /// Lazily instantiate and just pass the instance
-        public static Fighter Instance { get { return lazy.Value; } }
+        //public static Fighter Instance { get { return lazy.Value; } }
 
         /// <summary>
         /// The list of effects a fighter has
         /// </summary>
-        protected internal override List<Effect> Effects { get; set; } = new List<Effect>();
+        protected internal override List<Effect> Effects { get { return _effects; } }
+
+        private List<Effect> _effects = new List<Effect>();
 
         public Fighter()
         {
@@ -47,7 +49,7 @@ namespace RPG_Go
         public override void OnCreate(object sender, EventArgs e)
         {
             Character c = (Character)sender;
-            Random Rando = new Random();
+            //Random Rando = new Random();
 
             /// Hit Points at Higher Levels: 1d10 (or 6) + your Constitution modifier per fighter level after 1st
             c.MaxHP = Dice.D10();

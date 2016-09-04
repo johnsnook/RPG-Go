@@ -24,11 +24,19 @@ namespace RPG_Go
         //public event EventHandler DifficultyCheck;
 
         /// Experience Points, readonly
-        public int XP { get; } = 0;
+        public int XP { get { return _XP; } }
+
+        private int _XP = 0;
 
         /// Level, readonly
-        public int Level { get; } = 1;
+        public int Level { get { return _Level; } }
 
+        private int _Level = 1;
+
+        /// Level, readonly
+        public int Speed { get { return _speed; } }
+
+        protected internal int _speed = 1;
         private string _raceName;
 
         /// The name of the characters race that we use for display and lookup of the object itself
@@ -113,17 +121,17 @@ namespace RPG_Go
         }
 
         /// Invoker for Create event
-        protected virtual void OnCreate(EventArgs e) { Create?.Invoke(this, e); }
+        protected virtual void OnCreate(EventArgs e) { Create.Invoke(this, e); }
 
         /// Invoker for LevelUp event
-        protected virtual void OnLevelUp(EventArgs e) { LevelUp?.Invoke(this, e); }
+        protected virtual void OnLevelUp(EventArgs e) { LevelUp.Invoke(this, e); }
 
         private CharacterRace GetRace()
         {
             switch (_raceName)
             {
                 case "Dwarf":
-                    return Dwarf.Instance;
+                    return new Dwarf();
 
                 default:
                     return null;
@@ -135,7 +143,7 @@ namespace RPG_Go
             switch (ClassName)
             {
                 case "Fighter":
-                    return Fighter.Instance;
+                    return new Fighter();
 
                 default:
                     return null;

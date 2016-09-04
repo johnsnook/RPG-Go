@@ -10,17 +10,19 @@ namespace RPG_Go
     public class Dwarf : CharacterRace
     {
         // Lazily assign our instance to ourselves to keep it singletonish
-        private static readonly Lazy<Dwarf> lazy = new Lazy<Dwarf>(() => new Dwarf());
+        //private static readonly Lazy<Dwarf> lazy = new Lazy<Dwarf>(() => new Dwarf());
 
         /// <summary>
         /// Returns a singleton instance of this class.  I'm not sure it needs to be a singleton anymore
         /// </summary>
-        public static Dwarf Instance { get { return lazy.Value; } }
+        //public static Dwarf Instance { get { return lazy.Value; } }
 
         /// <summary>
         /// The list of traits this race has
         /// </summary>
-        public override List<Effect> Effects { get; set; } = new List<Effect>();
+        public override List<Effect> Effects { get { return effects; } }
+
+        private List<Effect> effects = new List<Effect>();
 
         /// Default constructor.  Attach yer Effects here to the traits bag
         public Dwarf()
@@ -52,6 +54,7 @@ namespace RPG_Go
 
             // alignment is sorta lawful good
             c.Alignment = new Alignment(Rando.Next(0, 11), Rando.Next(0, 11));
+            c._speed = Speed;
         }
 
         public virtual void OnLevelUp(object sender, EventArgs e)
@@ -63,39 +66,57 @@ namespace RPG_Go
         /// <summary>
         /// Read only dwarf
         /// </summary>
-        public override string Name { get; } = "Dwarf";
+        public override string Name { get { return "Dwarf"; } }
 
         /// <summary>
         /// Todo: write something less shitty
         /// </summary>
-        public override string Description { get; } = "Short and tough, you have a lovely beard.";
+        public override string Description { get { return "Short and tough, you have a lovely beard."; } }
 
         /// <summary>
         /// Size: Dwarves stand between 4 and 5 feet tall and average about 150 pounds. Your size is Medium.
         /// </summary>
-        public override string Size { get; } = "Medium";
+        public override string Size { get { return "Medium"; } }
 
         /// <summary>
         /// Speed: Your base walking speed is 25 feet. Your speed is not reduced by wearing Heavy Armor.
         /// </summary>
-        public override int Speed { get; } = 25;
+        public override int Speed { get { return 25; } }
 
         /// <summary>
         /// Age: Dwarves mature at the same rate as humans, but they’re considered young until they reach the age of 50. On average, they live about 350 years.
         /// </summary>
-        public override int StartingAge { get; } = 50;
+        public override int StartingAge { get { return 50; } }
 
-        public override string[] MaleNames { get; } = new string[30] { "Adrik", "Alberich", "Baern", "Barendd", "Brottor", "Bruenor", "Dain", "Darrak", "Delg", "Eberk", "Einkil", "Fargrim", "Flint", "Gardain",
+        public override string[] MaleNames
+        {
+            get
+            {
+                return new string[30] { "Adrik", "Alberich", "Baern", "Barendd", "Brottor", "Bruenor", "Dain", "Darrak", "Delg", "Eberk", "Einkil", "Fargrim", "Flint", "Gardain",
                     "Harbek", "Kildrak", "Morgran", "Orsik", "Oskar", "Rangrim", "Rurik", "Taklinn", "Thoradin", "Thorin", "Tordek", "Traubon", "Travok", "Ulfgar", "Veit", "Vondal"};
+            }
+        }
 
-        public override string[] FemaleNames { get; } = new string[23] { "Amber", "Artin", "Audhild", "Bardryn", "Dagnal", "Diesa", "Eldeth", "Falkrunn", "Finellen", "Gunnloda", "Gurdis", "Helja", "Hlin", "Kathra",
+        public override string[] FemaleNames
+        {
+            get
+            {
+                return new string[23] { "Amber", "Artin", "Audhild", "Bardryn", "Dagnal", "Diesa", "Eldeth", "Falkrunn", "Finellen", "Gunnloda", "Gurdis", "Helja", "Hlin", "Kathra",
                     "Kristryd", "Ilde", "Liftrasa", "Mardred", "Riswynn", "Sannl", "Torbera", "Torgga", "Vistra" };
+            }
+        }
 
-        public override string[] Surnames { get; } = new string[15] { "Balderk", "Battlehammer", "Brawnanvil", "Dankil", "Fireforge", "Frostbeard", "Gorunn", "Holderhek", "Ironfst", "Loderr", "Lutgehr", "Rumnaheim",
+        public override string[] Surnames
+        {
+            get
+            {
+                return new string[15] { "Balderk", "Battlehammer", "Brawnanvil", "Dankil", "Fireforge", "Frostbeard", "Gorunn", "Holderhek", "Ironfst", "Loderr", "Lutgehr", "Rumnaheim",
                     "Strakeln", "Torunn", "Ungart" };
+            }
+        }
 
-        public override string[] Languages { get; } = new string[2] { "Common", "Dwarvish" };
+        public override string[] Languages { get { return new string[2] { "Common", "Dwarvish" }; } }
 
-        public override string[] Proficiencies { get; } = new string[3] { "Stonecunning", "Darkvision", "Dwarven Toughness" };
+        public override string[] Proficiencies { get { return new string[3] { "Stonecunning", "Darkvision", "Dwarven Toughness" }; } }
     }
 }

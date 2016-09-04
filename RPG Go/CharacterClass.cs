@@ -11,7 +11,7 @@
         /// <summary>
         /// The list of features this race has
         /// </summary>
-        protected internal abstract List<Effect> Effects { get; set; }
+        protected internal abstract List<Effect> Effects { get; }
 
         public abstract void ConnectEffects(Character character);
 

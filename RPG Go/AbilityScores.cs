@@ -5,8 +5,10 @@
 
     public class BaseAndBonus
     {
-        public int Base { get; }
-        public int Bonus { get; set; }
+        public int Base { get { return _Base; } }
+        private int _Base;
+        public int Bonus { get { return _Bonus; } set { _Bonus = value; } }
+        private int _Bonus;
 
         public int Modifier
         {
@@ -17,8 +19,19 @@
             }
         }
 
+        public string ModifierAsString
+        {
+            get
+            {
+                decimal i = (Value - 10) / 2;
+                int j = (int)Math.Floor(i);
+                string k = j > -1 ? '+' + j.ToString() : j.ToString();
+                return k;
+            }
+        }
+
         // use this to get the total amount
-        public int Value { get { return Base + Bonus; } }
+        public int Value { get { return _Base + _Bonus; } }
 
         /// Dummy for serialization
         public BaseAndBonus() { }
@@ -27,9 +40,9 @@
         /// Constructor, sets base value
         /// </summary>
         /// <param name="BaseArg"></param>
-        public BaseAndBonus(int BaseArg)
+        public BaseAndBonus(int value)
         {
-            Base = BaseArg;
+            _Base = value;
         }
     }
 
