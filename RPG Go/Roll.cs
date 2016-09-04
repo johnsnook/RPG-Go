@@ -1,7 +1,5 @@
-﻿namespace RPG_Go.DungeonMaster
+﻿namespace RPG_Go
 {
-    using Monster;
-    using Player;
     using System;
 
     public enum die

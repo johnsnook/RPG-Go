@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace RPG_Go.Player
+namespace RPG_Go
 {
-    using DungeonMaster;
-
     /// this abstract defines the outline for the race base class
     public abstract class CharacterRace
     {

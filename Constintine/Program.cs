@@ -1,8 +1,7 @@
 ﻿namespace Constintine
 {
     using Newtonsoft.Json;
-    using RPG_Go.DungeonMaster;
-    using RPG_Go.Player;
+    using RPG_Go;
     using System;
     using System.Collections.Generic;
     using System.IO;
@@ -16,8 +15,8 @@
 
         private static void Main(string[] args)
         {
-            Console.WindowHeight = 50;
-            Console.WindowWidth = 160;
+            Console.WindowHeight = 40;
+            Console.WindowWidth = 140;
             TestUnits t;
 
             while (true)
@@ -38,7 +37,10 @@
                         break;
 
                     case "test":
-                        t = new TestUnits(words[1]);
+                        if (words.Length > 1)
+                            t = new TestUnits(words[1]);
+                        else
+                            t = new TestUnits("");
                         break;
 
                     case "q":

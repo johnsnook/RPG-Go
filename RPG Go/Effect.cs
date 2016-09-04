@@ -1,7 +1,7 @@
-﻿using RPG_Go.Player;
+﻿using RPG_Go;
 using System;
 
-namespace RPG_Go.DungeonMaster
+namespace RPG_Go
 {
     /// <summary>
     /// Base effect class

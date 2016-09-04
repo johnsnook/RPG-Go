@@ -1,6 +1,5 @@
-﻿namespace RPG_Go.Player
+﻿namespace RPG_Go
 {
-    using DungeonMaster;
     using System;
     using System.Collections.Generic;
 

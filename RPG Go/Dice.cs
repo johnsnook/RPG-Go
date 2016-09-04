@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace RPG_Go.DungeonMaster
+namespace RPG_Go
 {
     public class RPGEventArgs : EventArgs
     {

@@ -1,4 +1,4 @@
-﻿namespace RPG_Go.DungeonMaster
+﻿namespace RPG_Go
 {
     public class Armor : Item
     {

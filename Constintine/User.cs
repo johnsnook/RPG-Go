@@ -3,7 +3,7 @@ using System.IO;
 
 namespace Constinetine
 {
-    using RPG_Go.Player;
+    using RPG_Go;
 
     internal class User
     {

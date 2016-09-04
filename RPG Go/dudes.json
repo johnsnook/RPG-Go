@@ -1,8 +1,8 @@
 [
   {
-    "$type": "RPG_Go.Player.Character, RPG Go",
+    "$type": "RPG_Go.Character, RPG Go",
     "ArmorClass": {
-      "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+      "$type": "RPG_Go.BaseAndBonus, RPG Go",
       "Base": 0,
       "Bonus": 0,
       "Modifier": -5,
@@ -13,7 +13,7 @@
     "RaceName": "Dwarf",
     "ClassName": "Fighter",
     "Skills": {
-      "$type": "RPG_Go.Player.Skills, RPG Go",
+      "$type": "RPG_Go.Skills, RPG Go",
       "Acrobatics": 0,
       "AnimalHandling": 0,
       "Arcana": 0,
@@ -38,50 +38,50 @@
     "MaxHP": 9,
     "CurrentHP": 0,
     "Alignment": {
-      "$type": "RPG_Go.DungeonMaster.Alignment, RPG Go",
+      "$type": "RPG_Go.Alignment, RPG Go",
       "OrderAxis": 5,
       "MoralAxis": 7
     },
     "Inventory": [],
     "AbilityScores": {
-      "$type": "RPG_Go.DungeonMaster.AbilityScores, RPG Go",
+      "$type": "RPG_Go.AbilityScores, RPG Go",
       "Strength": {
-        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "$type": "RPG_Go.BaseAndBonus, RPG Go",
         "Base": 12,
         "Bonus": 0,
         "Modifier": 1,
         "Value": 12
       },
       "Dexterity": {
-        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "$type": "RPG_Go.BaseAndBonus, RPG Go",
         "Base": 11,
         "Bonus": 0,
         "Modifier": 0,
         "Value": 11
       },
       "Constitution": {
-        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "$type": "RPG_Go.BaseAndBonus, RPG Go",
         "Base": 12,
         "Bonus": 0,
         "Modifier": 1,
         "Value": 12
       },
       "Intelligence": {
-        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "$type": "RPG_Go.BaseAndBonus, RPG Go",
         "Base": 9,
         "Bonus": 0,
         "Modifier": 0,
         "Value": 9
       },
       "Wisdom": {
-        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "$type": "RPG_Go.BaseAndBonus, RPG Go",
         "Base": 10,
         "Bonus": 0,
         "Modifier": 0,
         "Value": 10
       },
       "Charisma": {
-        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "$type": "RPG_Go.BaseAndBonus, RPG Go",
         "Base": 8,
         "Bonus": 0,
         "Modifier": -1,
@@ -90,9 +90,9 @@
     }
   },
   {
-    "$type": "RPG_Go.Player.Character, RPG Go",
+    "$type": "RPG_Go.Character, RPG Go",
     "ArmorClass": {
-      "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+      "$type": "RPG_Go.BaseAndBonus, RPG Go",
       "Base": 0,
       "Bonus": 0,
       "Modifier": -5,
@@ -103,7 +103,7 @@
     "RaceName": "Dwarf",
     "ClassName": "Fighter",
     "Skills": {
-      "$type": "RPG_Go.Player.Skills, RPG Go",
+      "$type": "RPG_Go.Skills, RPG Go",
       "Acrobatics": 0,
       "AnimalHandling": 0,
       "Arcana": 0,
@@ -128,50 +128,50 @@
     "MaxHP": 1,
     "CurrentHP": 0,
     "Alignment": {
-      "$type": "RPG_Go.DungeonMaster.Alignment, RPG Go",
+      "$type": "RPG_Go.Alignment, RPG Go",
       "OrderAxis": 5,
       "MoralAxis": 7
     },
     "Inventory": [],
     "AbilityScores": {
-      "$type": "RPG_Go.DungeonMaster.AbilityScores, RPG Go",
+      "$type": "RPG_Go.AbilityScores, RPG Go",
       "Strength": {
-        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "$type": "RPG_Go.BaseAndBonus, RPG Go",
         "Base": 16,
         "Bonus": 0,
         "Modifier": 3,
         "Value": 16
       },
       "Dexterity": {
-        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "$type": "RPG_Go.BaseAndBonus, RPG Go",
         "Base": 13,
         "Bonus": 0,
         "Modifier": 1,
         "Value": 13
       },
       "Constitution": {
-        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "$type": "RPG_Go.BaseAndBonus, RPG Go",
         "Base": 13,
         "Bonus": 0,
         "Modifier": 1,
         "Value": 13
       },
       "Intelligence": {
-        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "$type": "RPG_Go.BaseAndBonus, RPG Go",
         "Base": 8,
         "Bonus": 0,
         "Modifier": -1,
         "Value": 8
       },
       "Wisdom": {
-        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "$type": "RPG_Go.BaseAndBonus, RPG Go",
         "Base": 11,
         "Bonus": 0,
         "Modifier": 0,
         "Value": 11
       },
       "Charisma": {
-        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "$type": "RPG_Go.BaseAndBonus, RPG Go",
         "Base": 7,
         "Bonus": 0,
         "Modifier": -1,
@@ -180,9 +180,9 @@
     }
   },
   {
-    "$type": "RPG_Go.Player.Character, RPG Go",
+    "$type": "RPG_Go.Character, RPG Go",
     "ArmorClass": {
-      "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+      "$type": "RPG_Go.BaseAndBonus, RPG Go",
       "Base": 0,
       "Bonus": 0,
       "Modifier": -5,
@@ -193,7 +193,7 @@
     "RaceName": "Dwarf",
     "ClassName": "Fighter",
     "Skills": {
-      "$type": "RPG_Go.Player.Skills, RPG Go",
+      "$type": "RPG_Go.Skills, RPG Go",
       "Acrobatics": 0,
       "AnimalHandling": 0,
       "Arcana": 0,
@@ -218,50 +218,50 @@
     "MaxHP": 9,
     "CurrentHP": 0,
     "Alignment": {
-      "$type": "RPG_Go.DungeonMaster.Alignment, RPG Go",
+      "$type": "RPG_Go.Alignment, RPG Go",
       "OrderAxis": 5,
       "MoralAxis": 7
     },
     "Inventory": [],
     "AbilityScores": {
-      "$type": "RPG_Go.DungeonMaster.AbilityScores, RPG Go",
+      "$type": "RPG_Go.AbilityScores, RPG Go",
       "Strength": {
-        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "$type": "RPG_Go.BaseAndBonus, RPG Go",
         "Base": 17,
         "Bonus": 0,
         "Modifier": 3,
         "Value": 17
       },
       "Dexterity": {
-        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "$type": "RPG_Go.BaseAndBonus, RPG Go",
         "Base": 15,
         "Bonus": 0,
         "Modifier": 2,
         "Value": 15
       },
       "Constitution": {
-        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "$type": "RPG_Go.BaseAndBonus, RPG Go",
         "Base": 16,
         "Bonus": 0,
         "Modifier": 3,
         "Value": 16
       },
       "Intelligence": {
-        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "$type": "RPG_Go.BaseAndBonus, RPG Go",
         "Base": 7,
         "Bonus": 0,
         "Modifier": -1,
         "Value": 7
       },
       "Wisdom": {
-        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "$type": "RPG_Go.BaseAndBonus, RPG Go",
         "Base": 13,
         "Bonus": 0,
         "Modifier": 1,
         "Value": 13
       },
       "Charisma": {
-        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "$type": "RPG_Go.BaseAndBonus, RPG Go",
         "Base": 6,
         "Bonus": 0,
         "Modifier": -2,
@@ -270,9 +270,9 @@
     }
   },
   {
-    "$type": "RPG_Go.Player.Character, RPG Go",
+    "$type": "RPG_Go.Character, RPG Go",
     "ArmorClass": {
-      "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+      "$type": "RPG_Go.BaseAndBonus, RPG Go",
       "Base": 0,
       "Bonus": 0,
       "Modifier": -5,
@@ -283,7 +283,7 @@
     "RaceName": "Dwarf",
     "ClassName": "Fighter",
     "Skills": {
-      "$type": "RPG_Go.Player.Skills, RPG Go",
+      "$type": "RPG_Go.Skills, RPG Go",
       "Acrobatics": 0,
       "AnimalHandling": 0,
       "Arcana": 0,
@@ -308,50 +308,50 @@
     "MaxHP": 6,
     "CurrentHP": 0,
     "Alignment": {
-      "$type": "RPG_Go.DungeonMaster.Alignment, RPG Go",
+      "$type": "RPG_Go.Alignment, RPG Go",
       "OrderAxis": 5,
       "MoralAxis": 7
     },
     "Inventory": [],
     "AbilityScores": {
-      "$type": "RPG_Go.DungeonMaster.AbilityScores, RPG Go",
+      "$type": "RPG_Go.AbilityScores, RPG Go",
       "Strength": {
-        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "$type": "RPG_Go.BaseAndBonus, RPG Go",
         "Base": 16,
         "Bonus": 0,
         "Modifier": 3,
         "Value": 16
       },
       "Dexterity": {
-        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "$type": "RPG_Go.BaseAndBonus, RPG Go",
         "Base": 10,
         "Bonus": 0,
         "Modifier": 0,
         "Value": 10
       },
       "Constitution": {
-        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "$type": "RPG_Go.BaseAndBonus, RPG Go",
         "Base": 10,
         "Bonus": 0,
         "Modifier": 0,
         "Value": 10
       },
       "Intelligence": {
-        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "$type": "RPG_Go.BaseAndBonus, RPG Go",
         "Base": 9,
         "Bonus": 0,
         "Modifier": 0,
         "Value": 9
       },
       "Wisdom": {
-        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "$type": "RPG_Go.BaseAndBonus, RPG Go",
         "Base": 9,
         "Bonus": 0,
         "Modifier": 0,
         "Value": 9
       },
       "Charisma": {
-        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "$type": "RPG_Go.BaseAndBonus, RPG Go",
         "Base": 6,
         "Bonus": 0,
         "Modifier": -2,
@@ -360,9 +360,9 @@
     }
   },
   {
-    "$type": "RPG_Go.Player.Character, RPG Go",
+    "$type": "RPG_Go.Character, RPG Go",
     "ArmorClass": {
-      "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+      "$type": "RPG_Go.BaseAndBonus, RPG Go",
       "Base": 0,
       "Bonus": 0,
       "Modifier": -5,
@@ -373,7 +373,7 @@
     "RaceName": "Dwarf",
     "ClassName": "Fighter",
     "Skills": {
-      "$type": "RPG_Go.Player.Skills, RPG Go",
+      "$type": "RPG_Go.Skills, RPG Go",
       "Acrobatics": 0,
       "AnimalHandling": 0,
       "Arcana": 0,
@@ -398,50 +398,50 @@
     "MaxHP": 2,
     "CurrentHP": 0,
     "Alignment": {
-      "$type": "RPG_Go.DungeonMaster.Alignment, RPG Go",
+      "$type": "RPG_Go.Alignment, RPG Go",
       "OrderAxis": 5,
       "MoralAxis": 7
     },
     "Inventory": [],
     "AbilityScores": {
-      "$type": "RPG_Go.DungeonMaster.AbilityScores, RPG Go",
+      "$type": "RPG_Go.AbilityScores, RPG Go",
       "Strength": {
-        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "$type": "RPG_Go.BaseAndBonus, RPG Go",
         "Base": 13,
         "Bonus": 0,
         "Modifier": 1,
         "Value": 13
       },
       "Dexterity": {
-        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "$type": "RPG_Go.BaseAndBonus, RPG Go",
         "Base": 12,
         "Bonus": 0,
         "Modifier": 1,
         "Value": 12
       },
       "Constitution": {
-        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "$type": "RPG_Go.BaseAndBonus, RPG Go",
         "Base": 13,
         "Bonus": 0,
         "Modifier": 1,
         "Value": 13
       },
       "Intelligence": {
-        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "$type": "RPG_Go.BaseAndBonus, RPG Go",
         "Base": 11,
         "Bonus": 0,
         "Modifier": 0,
         "Value": 11
       },
       "Wisdom": {
-        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "$type": "RPG_Go.BaseAndBonus, RPG Go",
         "Base": 11,
         "Bonus": 0,
         "Modifier": 0,
         "Value": 11
       },
       "Charisma": {
-        "$type": "RPG_Go.DungeonMaster.BaseAndBonus, RPG Go",
+        "$type": "RPG_Go.BaseAndBonus, RPG Go",
         "Base": 7,
         "Bonus": 0,
         "Modifier": -1,

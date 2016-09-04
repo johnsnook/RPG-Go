@@ -1,8 +1,7 @@
 ﻿using System;
 
-namespace RPG_Go.Player
+namespace RPG_Go
 {
-    using DungeonMaster;
     using System.Collections.Generic;
 
     /// <summary>

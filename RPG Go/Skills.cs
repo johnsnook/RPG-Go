@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace RPG_Go.Player
+namespace RPG_Go
 {
     /// <summary>
     /// This class encapsulates the skills for characters

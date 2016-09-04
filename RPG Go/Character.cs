@@ -1,9 +1,7 @@
 ﻿using System;
 
-namespace RPG_Go.Player
+namespace RPG_Go
 {
-    using DungeonMaster;
-
     /// <summary>
     /// The Character Class relies on Race and Class to to build.  It gets serialized and stored as JSON in characaters.json
     /// </summary>

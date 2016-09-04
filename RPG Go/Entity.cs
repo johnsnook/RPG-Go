@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace RPG_Go.DungeonMaster
+namespace RPG_Go
 {
     // look at this politically correct enum
     public enum genders
@@ -23,7 +23,10 @@ namespace RPG_Go.DungeonMaster
     public class Entity
     {
         public string Name { get; set; }
+
+        public string Race
         public genders Gender { get; set; }
+
         public int MaxHP { get; set; }
         public int CurrentHP { get; set; }
         public Alignment Alignment { get; set; }
