@@ -24,7 +24,7 @@ namespace RPG_Go
     {
         public string Name { get; set; }
 
-        public string Race
+        public string RaceName;
         public genders Gender { get; set; }
 
         public int MaxHP { get; set; }

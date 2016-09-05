@@ -71,9 +71,15 @@
             {
                 switch (test)
                 {
+                    case "c":
+                        ConsoleUserInterface conny = new ConsoleUserInterface();
+                        string[] choices = new string[3] { "Choice One", "Choice Two", "Choice 3" };
+                        conny.Choose("What do you want?", choices);
+                        break;
+
                     case "n":
-                        D = Dwarf.Instance;
-                        F = Fighter.Instance;
+                        D = new Dwarf();
+                        F = new Fighter();
                         C = new Character("Dwarf", "Fighter", genders.Male);
 
                         Console.ForegroundColor = ConsoleColor.Red;
@@ -86,7 +92,7 @@
                         break;
 
                     case "d":
-                        D = Dwarf.Instance;
+                        D = new Dwarf();
                         cw(D.Description);
                         break;
 
@@ -126,8 +132,8 @@
         private static void writeCharacters()
         {
             var dudes = new List<Character>();
-            Dwarf D = Dwarf.Instance;
-            Fighter F = Fighter.Instance;
+            Dwarf D = new Dwarf();
+            Fighter F = new Fighter();
             Character C = new Character("Dwarf", "Fighter", genders.MTF);
             dudes.Add(new Character("Dwarf", "Fighter", genders.Male));
             dudes.Add(new Character("Dwarf", "Fighter", genders.Female));

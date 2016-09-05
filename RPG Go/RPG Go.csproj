@@ -74,12 +74,16 @@
   <ItemGroup>
     <Compile Include="AbilityScores.cs" />
     <Compile Include="Armor.cs" />
+    <Compile Include="DungeonMaster.cs" />
     <Compile Include="Entity.cs" />
+    <Compile Include="IFileInterface.cs" />
     <Compile Include="Items.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="Dice.cs" />
     <Compile Include="Effect.cs" />
+    <Compile Include="IUserInterface.cs" />
     <Compile Include="Roll.cs" />
+    <Compile Include="StoryEngine\Story.cs" />
     <Compile Include="Weapon.cs" />
     <Compile Include="Monster.cs" />
     <Compile Include="CharacterClass.cs" />
@@ -94,7 +98,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="ClassDiagram.cd" />
     <None Include="dudes.json" />
   </ItemGroup>
   <ItemGroup>
@@ -113,6 +116,7 @@
     <Content Include="d20.ico" />
     <Content Include="json.txt" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
