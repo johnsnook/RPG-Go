@@ -31,7 +31,7 @@ namespace RPG_Go
             Effects.Add(te);
         }
 
-        public override void ConnectEffects(Character character)
+        public override void ConnectEffects(CharacterSheet character)
         {
             /// Ability Score Increase: Your Constitution score increases by 2.
             foreach (Effect effect in Effects)
@@ -47,7 +47,7 @@ namespace RPG_Go
         // Event should get called by the Character after rolling stats
         public override void OnCreate(object sender, EventArgs e)
         {
-            Character c = (Character)sender;
+            CharacterSheet c = (CharacterSheet)sender;
             Random Rando = new Random();
 
             //c.AbilityScores.Constitution.Bonus += 2;

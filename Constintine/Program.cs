@@ -64,7 +64,7 @@
             int[] list;
             Dwarf D;
             Fighter F;
-            Character C;
+            CharacterSheet C;
 
             cw("Welcome to the RPG_Go testing suite.");
             while (true)
@@ -80,7 +80,7 @@
                     case "n":
                         D = new Dwarf();
                         F = new Fighter();
-                        C = new Character("Dwarf", "Fighter", genders.Male);
+                        C = new CharacterSheet("Dwarf", "Fighter", genders.Male);
 
                         Console.ForegroundColor = ConsoleColor.Red;
                         cw(JsonConvert.SerializeObject(C, Formatting.Indented));
@@ -131,15 +131,15 @@
 
         private static void writeCharacters()
         {
-            var dudes = new List<Character>();
+            var dudes = new List<CharacterSheet>();
             Dwarf D = new Dwarf();
             Fighter F = new Fighter();
-            Character C = new Character("Dwarf", "Fighter", genders.MTF);
-            dudes.Add(new Character("Dwarf", "Fighter", genders.Male));
-            dudes.Add(new Character("Dwarf", "Fighter", genders.Female));
-            dudes.Add(new Character("Dwarf", "Fighter", genders.None));
-            dudes.Add(new Character("Dwarf", "Fighter", genders.Male));
-            dudes.Add(new Character("Dwarf", "Fighter", genders.Male));
+            CharacterSheet C = new CharacterSheet("Dwarf", "Fighter", genders.MTF);
+            dudes.Add(new CharacterSheet("Dwarf", "Fighter", genders.Male));
+            dudes.Add(new CharacterSheet("Dwarf", "Fighter", genders.Female));
+            dudes.Add(new CharacterSheet("Dwarf", "Fighter", genders.None));
+            dudes.Add(new CharacterSheet("Dwarf", "Fighter", genders.Male));
+            dudes.Add(new CharacterSheet("Dwarf", "Fighter", genders.Male));
 
             JsonSerializer serializer = new JsonSerializer();
             var settings = new JsonSerializerSettings();
@@ -149,7 +149,7 @@
 
             File.WriteAllText(dudesPath, JsonConvert.SerializeObject(dudes, settings));
 
-            Character dude = dudes[0];
+            CharacterSheet dude = dudes[0];
             Console.ForegroundColor = ConsoleColor.Yellow;
             cw(JsonConvert.SerializeObject(dude, settings));
             Console.ForegroundColor = ConsoleColor.White;
@@ -163,8 +163,8 @@
             settings.NullValueHandling = NullValueHandling.Ignore;
             settings.Formatting = Formatting.Indented;
 
-            List<Character> dudes = JsonConvert.DeserializeObject<List<Character>>(File.ReadAllText(dudesPath), settings);
-            Character dude = dudes[0];
+            List<CharacterSheet> dudes = JsonConvert.DeserializeObject<List<CharacterSheet>>(File.ReadAllText(dudesPath), settings);
+            CharacterSheet dude = dudes[0];
             //Console.ForegroundColor = ConsoleColor.Red;
             //cw(JsonConvert.SerializeObject(dude, Formatting.Indented));
             Console.ForegroundColor = ConsoleColor.Magenta;

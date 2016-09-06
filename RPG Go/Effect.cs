@@ -38,7 +38,7 @@ namespace RPG_Go
             _actionTokens = action.Split(bs);
         }
 
-        public void AttachEvent(Character publisher)
+        public void AttachEvent(CharacterSheet publisher)
         {
             switch (EventName)
             {
@@ -96,7 +96,7 @@ namespace RPG_Go
         /// </summary>
         /// <param name="Publisher"></param>
         /// <param name="action"></param>
-        public DelegatedEffect(Character Publisher, string name, string description, string eventName)
+        public DelegatedEffect(CharacterSheet Publisher, string name, string description, string eventName)
         {
             Name = name;
             Description = description;
@@ -105,7 +105,7 @@ namespace RPG_Go
         }
 
         /// Attach the event handler (action) to the appropriate publisher event
-        public void AttachEvent(Character publisher, EventHandler action)
+        public void AttachEvent(CharacterSheet publisher, EventHandler action)
         {
             switch (EventName)
             {

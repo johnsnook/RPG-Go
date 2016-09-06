@@ -29,26 +29,26 @@ namespace RPG_Go
             abilityScoredPrecedence = new string[6] { "Strength", "Constitution", "Dexterity", "Wisdom", "Intelligence", "Charisma" };
         }
 
-        public override void ConnectEffects(Character character)
+        public override void ConnectEffects(CharacterSheet character)
         {
             DelegatedEffect de = new DelegatedEffect(character, "Fighter Hit Dice", "Level up hit dice", "LevelUp");
             de.AttachEvent(character, delegate (object sender, EventArgs e)
             {
-                Character c = (Character)sender;
+                CharacterSheet c = (CharacterSheet)sender;
                 c.MaxHP += Dice.D10() + c.AbilityScores.Constitution.Modifier;
             });
         }
 
         public override void OnLevelUp(object sender, EventArgs e)
         {
-            Character c = (Character)sender;
+            CharacterSheet c = (CharacterSheet)sender;
             c.MaxHP += Dice.D10() + c.AbilityScores.Constitution.Modifier;
         }
 
         // Event should get called by the Character after rolling stats
         public override void OnCreate(object sender, EventArgs e)
         {
-            Character c = (Character)sender;
+            CharacterSheet c = (CharacterSheet)sender;
             //Random Rando = new Random();
 
             /// Hit Points at Higher Levels: 1d10 (or 6) + your Constitution modifier per fighter level after 1st

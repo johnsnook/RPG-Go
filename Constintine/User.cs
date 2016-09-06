@@ -8,8 +8,8 @@ namespace Constinetine
     internal class User
     {
         public string Name { set; get; }
-        public Character Slot1 { set; get; }
-        public Character Slot2 { set; get; }
+        public CharacterSheet Slot1 { set; get; }
+        public CharacterSheet Slot2 { set; get; }
 
         public User()
         {

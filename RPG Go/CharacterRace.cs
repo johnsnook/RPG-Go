@@ -24,7 +24,7 @@ namespace RPG_Go
         /// </summary>
         public abstract List<Effect> Effects { get; }
 
-        public abstract void ConnectEffects(Character character);
+        public abstract void ConnectEffects(CharacterSheet character);
 
         //public abstract List<KeyValuePair<string, Effect>> Traits { get; set; }
 

@@ -13,7 +13,7 @@
         /// </summary>
         protected internal abstract List<Effect> Effects { get; }
 
-        public abstract void ConnectEffects(Character character);
+        public abstract void ConnectEffects(CharacterSheet character);
 
         // All Properties are read only
         public abstract string Name { get; }

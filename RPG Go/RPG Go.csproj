@@ -87,7 +87,7 @@
     <Compile Include="Weapon.cs" />
     <Compile Include="Monster.cs" />
     <Compile Include="CharacterClass.cs" />
-    <Compile Include="Character.cs" />
+    <Compile Include="CharacterSheet.cs" />
     <Compile Include="Alignment.cs" />
     <Compile Include="Fighter.cs" />
     <Compile Include="Dwarf.cs" />

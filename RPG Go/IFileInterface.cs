@@ -2,8 +2,8 @@
 {
     public interface IFileInterface
     {
-        void SaveCharacter(Character character);
+        void SaveCharacter(CharacterSheet character);
 
-        Character LoadCharacter(int id);
+        CharacterSheet LoadCharacter(int id);
     }
 }

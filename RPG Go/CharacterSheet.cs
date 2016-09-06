@@ -5,7 +5,7 @@ namespace RPG_Go
     /// <summary>
     /// The Character Class relies on Race and Class to to build.  It gets serialized and stored as JSON in characaters.json
     /// </summary>
-    public class Character : Entity
+    public class CharacterSheet : Entity
     {
         /// <summary>
         /// Create event gets called after a new character is "rolled", allowing subscribers to modify a new level 1 character
@@ -81,7 +81,7 @@ namespace RPG_Go
         /// Default constructor so serializtion ignores the main one
         /// We'll need to reatach any effects here, treat it as "onLoad"
         /// </summary>
-        public Character()
+        public CharacterSheet()
         {
         }
 
@@ -95,7 +95,7 @@ namespace RPG_Go
         /// <param name="className"></param>
         /// <param name="gender"></param>
         // This will roll a new character based on a race and class
-        public Character(string raceName, string className, genders gender = genders.Female)
+        public CharacterSheet(string raceName, string className, genders gender = genders.Female)
         {
             Console.WriteLine("non default Character constructor called");
             // Alignment = new Alignment();
